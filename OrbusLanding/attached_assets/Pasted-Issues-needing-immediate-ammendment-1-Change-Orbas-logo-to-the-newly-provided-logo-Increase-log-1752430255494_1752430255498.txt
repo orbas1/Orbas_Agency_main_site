@@ -1,0 +1,28 @@
+Issues needing immediate ammendment 
+
+1. Change Orbas logo to the newly provided logo . Increase logo size by 30%
+2. The get started button makes no sense. It goes to agency.orbas.io but the words on the button makes no sense redwing it.
+3. The font styling is poor use poppin font
+4. I have attached logos for each of the platforms under their platform names you need to now integrate them I have only included the logo symbol only each one 
+5. I have include the Orbas agency logo symbol too 
+6. Upgrade the privacy policy to be full and comprehensive and fully compliant with Uk GDPR. Also Orbas is a brand name of Blackridge group Ltd
+7. Also to u need to full improve the description formatting 
+
+Below I have described the platforms so you actually understand them all our platform aim for lower fees than their competitors :
+
+1.Orbas AI is an ai suite utilize ai models to provide services to our customers . There are various systems in place such as social media help, code writing, chatbot creation, voice creations and video creation tools. Picture and image generation, social media brandi g suite and rss feed usage 
+
+1. Orbas jobs is a jobs board platform integrated with ai . With high level ATs system. cv tailoring with ai , ai for employees to help with the recruitment process . 
+
+1. Orbas freelance is a freelancer platform like Upwork connecting freelancers to clients for easy jobs and also providing clients with gig work
+2. Orbas learn: Orbas learn is a learning management system for teachers and tutors to sell their courses and provide 1 to 1 tuition. There are live classes and ai assistance for course creation.
+3. Orbas services is an on demand service platform for providers, swrvicement and customers . Orbas services allows for easy booking of services from accountants, HVAC to construction services etc. there is aleverythig available
+4. Upgrade the agency section Orbas agency provide ai automation services , turnkey whitelabel websites provision, web development and design and marketing services. Freelancers can join and clients can asking for a quote. Got to the website to find out more info 
+
+I have attached the logos for each thing separately
+
+Also you need to sort out the hero image in the hero section fully I have supplied one for you . I have also supplied several pictures for the body of the website too .
+
+Redesign the hero section to accommodate so it’s all super professional also your website links are not working !
+
+Crop and redesign any of the body pics so they are suitable and tint slightly so they all match the colour scheme 
