@@ -61,8 +61,26 @@
                     <a href="#contact" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Contact</a>
                     <a href="privacy.html" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Privacy</a>
                 </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
                 
     </header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden px-4 pb-4 border-b border-gray-200 bg-white">
+    <nav class="space-y-2">
+        <a href="#about" class="block text-gray-600 hover:text-orbas-blue">About</a>
+        <a href="#platforms" class="block text-gray-600 hover:text-orbas-blue">Platforms</a>
+        <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue">Agency</a>
+        <a href="investors.html" class="block text-gray-600 hover:text-orbas-blue">Investors</a>
+        <a href="#contact" class="block text-gray-600 hover:text-orbas-blue">Contact</a>
+        <a href="privacy.html" class="block text-gray-600 hover:text-orbas-blue">Privacy</a>
+    </nav>
+</div>
 
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -88,7 +106,7 @@
                     </h1>
                     
                     <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
-                        Five unified platforms provide AI-driven automation, expert talent, advanced learning and streamlined services—plus a world-class agency ready to build your next project. Everything operates 24/7 so your business never slows down.
+                        Five integrated platforms bring AI automation, top talent, expert learning and seamless services—plus an agency for your next project. Your business runs 24/7.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-6">
@@ -650,6 +668,15 @@
             </div>
         </div>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if(menuBtn && mobileMenu){
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
     <!-- Chatwoot -->
     <script>
       (function(d,t) {
