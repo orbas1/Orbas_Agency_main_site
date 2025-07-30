@@ -49,7 +49,9 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="attached_assets/orbas logo_1752425860914.png" alt="Orbas Logo" class="h-12 w-auto">
+                    <a href="index.html">
+                        <img src="attached_assets/orbas logo_1752425860914.png" alt="Orbas Logo" class="h-12 w-auto">
+                    </a>
                 </div>
                 
                 <!-- Navigation -->
@@ -71,8 +73,8 @@
     </header>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden hidden px-4 pb-4 border-b border-gray-200 bg-white">
-    <nav class="space-y-2">
+<div id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl">
+    <nav class="space-y-4 text-center text-lg font-medium">
         <a href="#about" class="block text-gray-600 hover:text-orbas-blue">About</a>
         <a href="#platforms" class="block text-gray-600 hover:text-orbas-blue">Platforms</a>
         <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue">Agency</a>
@@ -145,7 +147,7 @@
                     </div>
                     
                     <!-- Floating elements -->
-                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-60 animate-pulse"></div>
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-60 animate-bounce"></div>
                     <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full opacity-40 animate-bounce"></div>
                 </div>
             </div>
@@ -674,6 +676,10 @@
       if(menuBtn && mobileMenu){
         menuBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
         });
       }
     </script>
