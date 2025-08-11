@@ -16,7 +16,7 @@ The current system is an **enterprise-grade static website architecture** with t
 
 - **Frontend-only**: Pure HTML pages with professional enterprise styling
 - **CSS Framework**: Tailwind CSS via CDN with custom enterprise color palette
-- **Static Assets**: SVG-based logo and favicon with platform-specific branding
+- **Static Assets**: Logo and PNG favicon with platform-specific branding
 - **Client-side**: All functionality runs in the browser with modern animations
 - **Design Pattern**: Enterprise SaaS landing page with professional layouts
 
@@ -25,7 +25,6 @@ The current system is an **enterprise-grade static website architecture** with t
 /
 ├── index.html          # Main enterprise landing page with all platform logos
 ├── privacy.html        # UK GDPR compliant privacy policy (Blackridge Group Ltd)
-├── favicon.svg         # Professional site favicon
 └── attached_assets/    # Platform logos and branding assets
     ├── orbas logo_*           # Official Orbas logo files
     ├── Orbas ai_*             # AI platform logo
@@ -84,7 +83,7 @@ Currently, there is **no data flow** as this is a static website:
 
 ### CDN Dependencies
 - **Tailwind CSS**: `https://cdn.tailwind.com` - CSS framework for styling
-- **Inline SVG**: Logo and favicon are embedded as data URIs
+- **External PNG**: Logo and favicon are referenced via external URLs
 
 ### Future Considerations
 Based on the content mentioning "five powerful platforms," this static site likely serves as a landing page for a larger ecosystem that may include:
