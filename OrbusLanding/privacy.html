@@ -47,7 +47,9 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="https://i.ibb.co/7dRPCgrB/IMG-2726.jpg" alt="Orbas Logo" class="h-12 w-auto">
+                    <a href="index.html">
+                        <img src="https://i.ibb.co/7dRPCgrB/IMG-2726.jpg" alt="Orbas Logo" class="h-12 w-auto">
+                    </a>
                 </div>
 
                 <!-- Navigation -->
@@ -59,9 +61,28 @@
                     <a href="index.html#contact" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Contact</a>
                     <a href="privacy.html" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Privacy</a>
                 </nav>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl">
+        <nav class="space-y-4 text-center text-lg font-medium">
+            <a href="index.html#about" class="block text-gray-600 hover:text-orbas-blue">About</a>
+            <a href="index.html#platforms" class="block text-gray-600 hover:text-orbas-blue">Platforms</a>
+            <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue">Agency</a>
+            <a href="investors.html" class="block text-gray-600 hover:text-orbas-blue">Investors</a>
+            <a href="index.html#contact" class="block text-gray-600 hover:text-orbas-blue">Contact</a>
+            <a href="privacy.html" class="block text-gray-600 hover:text-orbas-blue">Privacy</a>
+        </nav>
+    </div>
 
     <!-- Page Title -->
     <section class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 text-center text-white">
@@ -341,6 +362,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if(menuBtn && mobileMenu){
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+        });
+      }
+    </script>
+
     <!-- Chatwoot -->
     <script>
       (function(d,t) {
