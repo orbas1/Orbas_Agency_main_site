@@ -14,7 +14,7 @@ Below I have described the platforms so you actually understand them all our pla
 
 1. Orbas jobs is a jobs board platform integrated with ai . With high level ATs system. cv tailoring with ai , ai for employees to help with the recruitment process . 
 
-1. Orbas freelance is a freelancer platform like Upwork connecting freelancers to clients for easy jobs and also providing clients with gig work
+1. Orbas freelance is a freelancer platform connecting freelancers to clients for easy jobs and also providing clients with gig work
 2. Orbas learn: Orbas learn is a learning management system for teachers and tutors to sell their courses and provide 1 to 1 tuition. There are live classes and ai assistance for course creation.
 3. Orbas services is an on demand service platform for providers, swrvicement and customers . Orbas services allows for easy booking of services from accountants, HVAC to construction services etc. there is aleverythig available
 4. Upgrade the agency section Orbas agency provide ai automation services , turnkey whitelabel websites provision, web development and design and marketing services. Freelancers can join and clients can asking for a quote. Got to the website to find out more info 

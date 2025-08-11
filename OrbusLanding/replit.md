@@ -52,7 +52,7 @@ The current system is an **enterprise-grade static website architecture** with t
 
 ### 2. Platform Showcases (All with Actual Logos)
 - **Orbas AI**: Purple/pink/blue gradients - Comprehensive AI suite with social media automation, code generation, chatbots, voice/video creation
-- **Orbas Freelance**: Orange gradients - Professional freelancer platform like Upwork with competitive lower fees and quality gig work
+- **Orbas Freelance**: Orange gradients - Professional freelancer platform connecting freelancers to clients with competitive lower fees and quality gig work
 - **Orbas Jobs**: Green gradients - AI-powered jobs board with high-level ATS system, CV tailoring, and recruitment AI assistance
 - **Orbas Learn**: Blue/purple gradients - Learning management system for teachers/tutors with course sales, live classes, and AI assistance
 - **Orbas Services**: Blue/indigo gradients - On-demand service platform for accountants, HVAC, construction, and easy booking system
