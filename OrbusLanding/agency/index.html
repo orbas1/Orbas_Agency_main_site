@@ -53,16 +53,16 @@
     <style type="text/tailwindcss">
       @layer components {
         .btn-primary {
-          @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+          @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue/80 to-orbas-dark-blue/80 hover:from-orbas-dark-blue/80 hover:to-orbas-blue/80 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border border-white/20;
         }
         .btn-primary-sm {
-          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed;
+          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue/80 to-orbas-blue/80 hover:from-orbas-blue/80 hover:to-orbas-dark-blue/80 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-md border border-white/20;
         }
         .badge {
           @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orbas-blue/20 text-orbas-light-blue border border-orbas-light-blue/30;
         }
         .form-input {
-          @apply w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue;
+          @apply w-full p-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-gray-200 shadow-md backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue;
         }
       }
     </style>
@@ -179,6 +179,7 @@
     <section
       class="relative bg-gradient-to-br from-gray-900 via-orbas-dark-blue to-orbas-blue py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
+      <canvas id="agency-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
       <div class="absolute inset-0 bg-black/20"></div>
       <div
         class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
@@ -498,7 +499,7 @@
         <p class="text-lg text-center mb-12 text-gray-100">
           Share a few details and our team will reach out shortly.
         </p>
-        <div class="max-w-lg mx-auto bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
+        <div class="max-w-lg mx-auto bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-2xl p-8 border border-white/20">
           <form id="lead-form" action="https://agency.orbas.io/index.php/collect_leads/save" role="form" method="post" accept-charset="utf-8" class="space-y-4">
             <input type="text" name="first_name" id="first_name" placeholder="First name" class="form-input" />
             <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="form-input" />
@@ -516,11 +517,11 @@
             </div>
             <div class="flex items-start">
               <input id="privacy" type="checkbox" class="mt-1 mr-2">
-              <label for="privacy" class="text-sm text-gray-900">I agree to the <a href="/privacy" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
+              <label for="privacy" class="text-sm text-white">I agree to the <a href="/privacy" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
             </div>
             <button id="submit-btn" type="submit" class="btn-primary-sm" disabled>Submit</button>
           </form>
-          <p id="form-message" class="hidden text-center text-sm text-gray-900 mt-4"></p>
+          <p id="form-message" class="hidden text-center text-sm text-white mt-4"></p>
         </div>
       </div>
     </section>
@@ -751,6 +752,15 @@
     </script>
 
     <!-- Chatwoot -->
+    <script src="../hero-nodes.js"></script>
+    <script>
+      initHeroNodes('agency-hero-canvas', {
+        nodeColor: '#3b82f6',
+        lineColor: 'rgba(59,130,246,0.3)',
+        nodeCount: 70,
+        connectionDistance: 150
+      });
+    </script>
     <script>
       (function (d, t) {
         var BASE_URL = "https://support.orbas.io";
