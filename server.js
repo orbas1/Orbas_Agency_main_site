@@ -1,8 +1,6 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
-const cron = require('node-cron');
 const multer = require('multer');
 
 const app = express();
@@ -65,52 +63,9 @@ app.post('/submit-bug', upload.single('evidence'), (req, res) => {
     .join(',') + '\n';
 
   fs.writeFileSync(filePath, header + line);
-  res.sendStatus(200);
+  res.status(200).json({ success: true });
 });
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: process.env.SMTP_PORT || 587,
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-cron.schedule('0 0 * * *', () => {
-  const counts = getCounts();
-  const text = `Bug report summary:\nCritical: ${counts.critical}\nHigh: ${counts.high}\nModerate: ${counts.moderate}\nLow: ${counts.low}`;
-  transporter.sendMail(
-    {
-      from: process.env.SMTP_USER,
-      to: 'support@orbas.io',
-      subject: 'Bug Report Summary',
-      text,
-    },
-    (err) => {
-      if (err) console.error('Email error', err);
-    }
-  );
-});
-
-app.get('/test-email', (req, res) => {
-  transporter.sendMail(
-    {
-      from: process.env.SMTP_USER,
-      to: 'support@orbas.io',
-      subject: 'Test Email',
-      text: 'SMTP configuration successful',
-    },
-    (err) => {
-      if (err) {
-        console.error('Email error', err);
-        return res.status(500).send('Email failed');
-      }
-      res.send('Email sent');
-    }
-  );
-});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

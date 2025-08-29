@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug Report Form - Orbas</title>
+    <meta name="description" content="Submit detailed bug reports to the Orbas team and help enhance our enterprise ecosystem.">
+    <meta name="keywords" content="Orbas bug report, issue submission, platform feedback">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Bug Report Form - Orbas">
+    <meta property="og:description" content="Report issues and support continuous improvement across the Orbas ecosystem.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orbas.io/bug-report">
+    <meta property="og:image" content="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
 
-    <link rel="icon" type="image/png" href="attached_assets/orbas-logo.png">
-    <link rel="alternate icon" href="attached_assets/orbas-logo.png">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
+    <link rel="alternate icon" href="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +56,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="/">
-                        <img src="attached_assets/orbas-logo.png" alt="Orbas Logo" class="h-12 w-auto">
+                        <img src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png" alt="Orbas Logo" class="h-12 w-auto">
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
@@ -81,7 +89,7 @@
 
     <section class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 text-center text-white">
         <h1 class="text-4xl sm:text-5xl font-bold">Bug Report Form</h1>
-        <p class="mt-2 text-lg">Help us improve the Orbas ecosystem</p>
+        <p class="mt-2 text-lg">Provide comprehensive feedback to drive continuous improvement across the Orbas ecosystem.</p>
     </section>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -180,7 +188,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
                 <div class="lg:col-span-2">
                     <div class="rounded-lg p-3 inline-block mb-6">
-                       <img src="attached_assets/orbas-logo.png" alt="Orbas Logo" class="h-12 w-auto">
+                       <img src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png" alt="Orbas Logo" class="h-12 w-auto">
                     </div>
                     <p class="text-gray-700 leading-relaxed text-lg mb-6">
                         The complete ecosystem for digital innovation, connecting enterprises with AI-powered solutions,
@@ -272,15 +280,25 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            const res = await fetch('/submit-bug', {
-                method: 'POST',
-                body: formData
-            });
-            if(res.ok){
-                alert('Bug report submitted. Thank you!');
-                form.reset();
-                fetchCounts();
-            } else {
+            try {
+                const res = await fetch('/submit-bug', {
+                    method: 'POST',
+                    body: formData
+                });
+                if(res.ok){
+                    const summary = `Bug Report Submitted:\nTitle: ${formData.get('title')}\nName: ${formData.get('name')}\nContact: ${formData.get('contact')}\nURL: ${formData.get('error_url') || 'N/A'}\nLevel: ${formData.get('error_level')}\nDescription: ${formData.get('description') || 'N/A'}`;
+                    if(window.$chatwoot){
+                        window.$chatwoot.open();
+                        window.$chatwoot.sendMessage(summary);
+                    }
+                    alert('Bug report submitted. Thank you!');
+                    form.reset();
+                    fetchCounts();
+                } else {
+                    alert('There was a problem submitting your report.');
+                }
+            } catch(err){
+                console.error(err);
                 alert('There was a problem submitting your report.');
             }
         });
