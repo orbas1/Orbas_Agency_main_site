@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://orbas.io/bug-report">
     <meta property="og:image" content="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
 
-    <link rel="icon" type="image/png" href="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
-    <link rel="alternate icon" href="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png">
+    <link rel="alternate icon" href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -259,9 +259,11 @@
             });
         }
 
+        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? '' : 'https://support.orbas.io';
+
         async function fetchCounts(){
             try {
-                const res = await fetch('/bug-report-counts');
+                const res = await fetch(`${API_BASE}/bug-report-counts`);
                 if(res.ok){
                     const data = await res.json();
                     document.getElementById('critical-count').textContent = data.critical;
@@ -281,7 +283,7 @@
             e.preventDefault();
             const formData = new FormData(form);
             try {
-                const res = await fetch('/submit-bug', {
+                const res = await fetch(`${API_BASE}/submit-bug`, {
                     method: 'POST',
                     body: formData
                 });
