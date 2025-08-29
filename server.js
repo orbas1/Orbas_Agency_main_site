@@ -2,8 +2,10 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'OrbusLanding')));
 
