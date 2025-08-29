@@ -1,374 +1,726 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orbas Agency - 24/7 World Class Web Solutions</title>
-    <meta name="description" content="Professional agency offering whitelabel websites, mobile apps, AI automations and marketing solutions with 24/7 support.">
+    <meta
+      name="description"
+      content="Professional agency offering whitelabel websites, mobile apps, AI automations and marketing solutions with 24/7 support."
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://i.ibb.co/9mc7JPW7/IMG-2724.png">
-    <link rel="alternate icon" href="https://i.ibb.co/9mc7JPW7/IMG-2724.png">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.ibb.co/9mc7JPW7/IMG-2724.png"
+    />
+    <link rel="alternate icon" href="https://i.ibb.co/9mc7JPW7/IMG-2724.png" />
 
     <!-- Google Fonts - Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom Tailwind Config -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif']
-                    },
-                    colors: {
-                        'orbas-blue': '#3b82f6',
-                        'orbas-dark-blue': '#1e40af',
-                        'orbas-light-blue': '#60a5fa',
-                        'orbas-orange': '#f97316',
-                        'orbas-green': '#10b981',
-                        'orbas-purple': '#8b5cf6',
-                        'orbas-pink': '#ec4899',
-                        'orbas-cream': '#fef3c7',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              "orbas-blue": "#3b82f6",
+              "orbas-dark-blue": "#1e40af",
+              "orbas-light-blue": "#60a5fa",
+              "orbas-orange": "#f97316",
+              "orbas-purple": "#8b5cf6",
+              "orbas-pink": "#ec4899",
+              "orbas-cream": "#fef3c7",
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-white text-gray-900 font-poppins antialiased">
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-primary {
+          @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+        }
+        .btn-primary-sm {
+          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue hover:from-orbas-dark-blue hover:to-orbas-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5;
+        }
+        .badge {
+          @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orbas-blue/20 text-orbas-light-blue border border-orbas-light-blue/30;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 font-poppins antialiased">
     <!-- Header Navigation -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="https://i.ibb.co/7dRPCgrB/IMG-2726.jpg" alt="Orbas Logo" class="h-12 w-auto">
-                    </a>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html">
+              <img
+                src="attached_assets/orbas-logo.png"
+                alt="Orbas Logo"
+                class="h-12 w-auto"
+              />
+            </a>
+          </div>
 
-                <!-- Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html#about" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">About</a>
-                    <a href="index.html#platforms" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Platforms</a>
-                    <a href="agency.html" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Agency</a>
-                    <a href="investors.html" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Investors</a>
-                    <a href="index.html#contact" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Contact</a>
-                    <a href="privacy.html" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Privacy</a>
-                </nav>
+          <!-- Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html#about"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="index.html#platforms"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >Platforms</a
+            >
+            <a
+              href="agency.html"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >Agency</a
+            >
+            <a
+              href="investors.html"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >Investors</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >Contact</a
+            >
+            <a
+              href="privacy.html"
+              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
+              >Privacy</a
+            >
+          </nav>
 
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl">
-        <nav class="space-y-4 text-center text-lg font-medium">
-            <a href="index.html#about" class="block text-gray-600 hover:text-orbas-blue">About</a>
-            <a href="index.html#platforms" class="block text-gray-600 hover:text-orbas-blue">Platforms</a>
-            <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue">Agency</a>
-            <a href="investors.html" class="block text-gray-600 hover:text-orbas-blue">Investors</a>
-            <a href="index.html#contact" class="block text-gray-600 hover:text-orbas-blue">Contact</a>
-            <a href="privacy.html" class="block text-gray-600 hover:text-orbas-blue">Privacy</a>
-        </nav>
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl"
+    >
+      <nav class="space-y-4 text-center text-lg font-medium">
+        <a
+          href="index.html#about"
+          class="block text-gray-600 hover:text-orbas-blue"
+          >About</a
+        >
+        <a
+          href="index.html#platforms"
+          class="block text-gray-600 hover:text-orbas-blue"
+          >Platforms</a
+        >
+        <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue"
+          >Agency</a
+        >
+        <a
+          href="investors.html"
+          class="block text-gray-600 hover:text-orbas-blue"
+          >Investors</a
+        >
+        <a
+          href="index.html#contact"
+          class="block text-gray-600 hover:text-orbas-blue"
+          >Contact</a
+        >
+        <a href="privacy.html" class="block text-gray-600 hover:text-orbas-blue"
+          >Privacy</a
+        >
+      </nav>
     </div>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-500/20 text-green-300 border border-green-400/30 mb-6">
-                    <span class="mr-2">🚀</span>
-                    24/7 World Class Web Solutions
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                    Orbas Agency
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
-                    Our specialists craft high-impact websites, mobile apps and automations to accelerate your growth. Chat with us any time—tell us your budget and we’ll make it work.
-                </p>
-                <a href="mailto:agency@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Contact Agency
-                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="relative">
-                <div class="relative overflow-hidden rounded-xl shadow-xl">
-                    <img src="https://i.ibb.co/Q7FS0GJ8/b34f2ac7-da27-49d4-ba42-938607b02fa1.png" alt="AI robot sitting cross-legged" class="w-full h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-green-900/50 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6">
-                        <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 flex items-center">
-                            <img src="attached_assets/Orbas agency_1752430278495.png" alt="Orbas Agency" class="w-12 h-12 mr-4">
-                            <div>
-                                <h3 class="text-white font-semibold text-lg mb-1">Full-Service Development</h3>
-                                <p class="text-gray-200 text-sm">Delivering sites and apps that scale with your business</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section
+      class="relative bg-gradient-to-br from-gray-900 via-orbas-dark-blue to-orbas-blue py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div
+        class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
+        <div>
+          <div class="badge mb-6">
+            <span class="mr-2">🚀</span>
+            24/7 World Class Web Solutions
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+          >
+            Orbas Agency
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
+            Our specialists craft high-impact websites, mobile apps and
+            automations to accelerate your growth. Chat with us any time—tell us
+            your budget and we’ll make it work.
+          </p>
+          <a href="mailto:agency@orbas.io" class="btn-primary">
+            Contact Agency
+            <svg
+              class="ml-2 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
         </div>
+        <div class="relative">
+          <div class="relative overflow-hidden rounded-xl shadow-xl">
+            <img
+              src="https://i.ibb.co/Q7FS0GJ8/b34f2ac7-da27-49d4-ba42-938607b02fa1.png"
+              alt="AI robot sitting cross-legged"
+              class="w-full h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-orbas-dark-blue/50 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div
+                class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 flex items-center"
+              >
+                <img
+                  src="attached_assets/orbas-logo.png"
+                  alt="Orbas Logo"
+                  class="w-12 h-12 mr-4"
+                />
+                <div>
+                  <h3 class="text-white font-semibold text-lg mb-1">
+                    Full-Service Development
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Delivering sites and apps that scale with your business
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Our Values Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
-                <p class="text-lg text-gray-700 mb-6">We believe in transparent communication, relentless creativity and delivering outstanding value for money. Our experts partner with you to bring visionary ideas to life.</p>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Collaborative design process</li>
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Customer-first approach and rapid response</li>
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Solutions tailored to any budget</li>
-                </ul>
-            </div>
-            <div class="order-1 md:order-2">
-                <img src="https://i.ibb.co/F4JfrrvM/still-life-business-roles-with-various-mechanism-pieces.jpg" alt="Still life of business roles with mechanism pieces" class="rounded-xl shadow-xl object-cover w-full h-96">
-            </div>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Our Core Values
+          </h2>
+          <p class="text-lg text-gray-700 mb-6">
+            We believe in transparent communication, relentless creativity and
+            delivering outstanding value for money. Our experts partner with you
+            to bring visionary ideas to life.
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Collaborative design
+              process
+            </li>
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Customer-first approach
+              and rapid response
+            </li>
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Solutions tailored to
+              any budget
+            </li>
+          </ul>
         </div>
+        <div class="order-1 md:order-2">
+          <img
+            src="https://i.ibb.co/F4JfrrvM/still-life-business-roles-with-various-mechanism-pieces.jpg"
+            alt="Still life of business roles with mechanism pieces"
+            class="rounded-xl shadow-xl object-cover w-full h-96"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Services</h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">From concept to launch, our team handles every stage of your digital project. We focus on exceptional UX, lightning-fast performance and SEO best practices so your brand stands out online.</p>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">1.</span>Whitelabel Turnkey Solutions Web & Mobile</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">2.</span>Mobile Apps</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">3.</span>Web Applications and Websites</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">4.</span>Web Design</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">5.</span>Blockchain Development</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">6.</span>A.I. Automations</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">7.</span>Marketing Solutions</li>
-                    <li class="flex"><span class="font-bold text-orbas-green mr-2">8.</span>24/7 Support & Maintenance</li>
-                </ul>
-            </div>
-            <div>
-                <img src="https://i.ibb.co/mCZ7MWgX/representation-user-experience-interface-design.jpg" alt="Design in progress" class="rounded-xl shadow-xl object-cover w-full h-96">
-            </div>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            From concept to launch, our team handles every stage of your digital
+            project. We focus on exceptional UX, lightning-fast performance and
+            SEO best practices so your brand stands out online.
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">1.</span>Whitelabel
+              Turnkey Solutions Web & Mobile
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">2.</span>Mobile Apps
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">3.</span>Web
+              Applications and Websites
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">4.</span>Web Design
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">5.</span>Blockchain
+              Development
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">6.</span>A.I.
+              Automations
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">7.</span>Marketing
+              Solutions
+            </li>
+            <li class="flex">
+              <span class="font-bold text-orbas-blue mr-2">8.</span>24/7 Support
+              & Maintenance
+            </li>
+          </ul>
         </div>
+        <div>
+          <img
+            src="https://i.ibb.co/mCZ7MWgX/representation-user-experience-interface-design.jpg"
+            alt="Design in progress"
+            class="rounded-xl shadow-xl object-cover w-full h-96"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Why Choose Us Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why Choose Orbas Agency</h2>
-                <p class="text-lg text-gray-700">We combine innovative design with bulletproof engineering to deliver projects that exceed expectations. Our dedicated team supports you around the clock and ensures every pound of your budget drives measurable value.</p>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Dedicated account manager and 24/7 support</li>
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Transparent pricing with flexible packages</li>
-                    <li class="flex"><span class="text-orbas-green mr-2">✓</span>Secure, scalable solutions built for growth</li>
-                </ul>
-                <a href="mailto:agency@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">Get Your Free Quote</a>
-            </div>
-            <div>
-                <img src="https://i.ibb.co/bMW84g3n/1634.jpg" alt="Project planning" class="rounded-xl shadow-xl object-cover w-full h-96">
-            </div>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-6">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Why Choose Orbas Agency
+          </h2>
+          <p class="text-lg text-gray-700">
+            We combine innovative design with bulletproof engineering to deliver
+            projects that exceed expectations. Our dedicated team supports you
+            around the clock and ensures every pound of your budget drives
+            measurable value.
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Dedicated account
+              manager and 24/7 support
+            </li>
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Transparent pricing
+              with flexible packages
+            </li>
+            <li class="flex">
+              <span class="text-orbas-blue mr-2">✓</span>Secure, scalable
+              solutions built for growth
+            </li>
+          </ul>
+          <a href="mailto:agency@orbas.io" class="btn-primary"
+            >Get Your Free Quote</a
+          >
         </div>
+        <div>
+          <img
+            src="https://i.ibb.co/bMW84g3n/1634.jpg"
+            alt="Project planning"
+            class="rounded-xl shadow-xl object-cover w-full h-96"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Packages Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Tailored Packages Built for Scale</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition">
-                    <h3 class="text-2xl font-bold mb-4">Launch Package</h3>
-                    <p class="text-gray-600 mb-6">Designed for new ventures establishing their digital presence.</p>
-                    <ul class="flex-1 space-y-2 text-gray-600">
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Fast 5-page site</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>On-page SEO essentials</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Email support</li>
-                    </ul>
-                    <p class="text-4xl font-extrabold text-orbas-green mt-6 mb-6">From £999</p>
-                    <a href="mailto:agency@orbas.io?subject=Launch%20Package" class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5">Get Started</a>
-                </div>
-                <div class="relative flex flex-col p-8 bg-white rounded-2xl shadow-xl border-2 border-orbas-green md:scale-105 md:-translate-y-2">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orbas-green text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Most Popular</div>
-                    <h3 class="text-2xl font-bold mb-4">Growth Package</h3>
-                    <p class="text-gray-600 mb-6">Advanced capabilities and integrations for scaling teams.</p>
-                    <ul class="flex-1 space-y-2 text-gray-600">
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Custom features</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>API &amp; database integrations</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Priority response SLA</li>
-                    </ul>
-                    <p class="text-4xl font-extrabold text-orbas-green mt-6 mb-6">From £2,500</p>
-                    <a href="mailto:agency@orbas.io?subject=Growth%20Package" class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5">Request Proposal</a>
-                </div>
-                <div class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition">
-                    <h3 class="text-2xl font-bold mb-4">Enterprise Package</h3>
-                    <p class="text-gray-600 mb-6">Bespoke digital ecosystems for large organisations.</p>
-                    <ul class="flex-1 space-y-2 text-gray-600">
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Unlimited pages &amp; features</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>Dedicated cross-functional team</li>
-                        <li class="flex items-center"><span class="text-orbas-green mr-2">✓</span>24/7 concierge support</li>
-                    </ul>
-                    <p class="text-4xl font-extrabold text-orbas-green mt-6 mb-6">From £10,000</p>
-                    <a href="mailto:agency@orbas.io?subject=Enterprise%20Package" class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5">Request Proposal</a>
-                </div>
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
+          Tailored Packages Built for Scale
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">Launch Package</h3>
+            <p class="text-gray-600 mb-6">
+              Designed for new ventures establishing their digital presence.
+            </p>
+            <ul class="flex-1 space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Fast 5-page site
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>On-page SEO
+                essentials
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Email support
+              </li>
+            </ul>
+            <p class="text-4xl font-extrabold text-orbas-blue mt-6 mb-6">
+              From £999
+            </p>
+            <a
+              href="mailto:agency@orbas.io?subject=Launch%20Package"
+              class="btn-primary-sm"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="relative flex flex-col p-8 bg-white rounded-2xl shadow-xl border-2 border-orbas-blue md:scale-105 md:-translate-y-2"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orbas-blue text-white text-xs font-semibold px-3 py-1 rounded-full shadow"
+            >
+              Most Popular
             </div>
-            <p class="mt-8 text-gray-600">Ready to accelerate your next project? Contact <a href="mailto:agency@orbas.io" class="text-orbas-blue underline">agency@orbas.io</a> or open the chat bubble and share your goals and budget—we'll craft a package that fits.</p>
-            <p class="mt-4 text-gray-600">Freelancers are welcome to collaborate with us. Email <a href="mailto:support@orbas.io" class="text-orbas-blue underline">support@orbas.io</a> with the subject <strong>Agency Work</strong> and include your CV, cover letter and hourly fees.</p>
+            <h3 class="text-2xl font-bold mb-4">Growth Package</h3>
+            <p class="text-gray-600 mb-6">
+              Advanced capabilities and integrations for scaling teams.
+            </p>
+            <ul class="flex-1 space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Custom features
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>API &amp; database
+                integrations
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Priority response SLA
+              </li>
+            </ul>
+            <p class="text-4xl font-extrabold text-orbas-blue mt-6 mb-6">
+              From £2,500
+            </p>
+            <a
+              href="mailto:agency@orbas.io?subject=Growth%20Package"
+              class="btn-primary-sm"
+              >Request Proposal</a
+            >
+          </div>
+          <div
+            class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">Enterprise Package</h3>
+            <p class="text-gray-600 mb-6">
+              Bespoke digital ecosystems for large organisations.
+            </p>
+            <ul class="flex-1 space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Unlimited pages &amp;
+                features
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>Dedicated
+                cross-functional team
+              </li>
+              <li class="flex items-center">
+                <span class="text-orbas-blue mr-2">✓</span>24/7 concierge
+                support
+              </li>
+            </ul>
+            <p class="text-4xl font-extrabold text-orbas-blue mt-6 mb-6">
+              From £10,000
+            </p>
+            <a
+              href="mailto:agency@orbas.io?subject=Enterprise%20Package"
+              class="btn-primary-sm"
+              >Request Proposal</a
+            >
+          </div>
         </div>
+        <p class="mt-8 text-gray-600">
+          Ready to accelerate your next project? Contact
+          <a href="mailto:agency@orbas.io" class="text-orbas-blue underline"
+            >agency@orbas.io</a
+          >
+          or open the chat bubble and share your goals and budget—we'll craft a
+          package that fits.
+        </p>
+        <p class="mt-4 text-gray-600">
+          Freelancers are welcome to collaborate with us. Email
+          <a href="mailto:support@orbas.io" class="text-orbas-blue underline"
+            >support@orbas.io</a
+          >
+          with the subject <strong>Agency Work</strong> and include your CV,
+          cover letter and hourly fees.
+        </p>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-black">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
-                <div class="lg:col-span-2">
-                    <div class="rounded-lg p-3 inline-block mb-6">
-                       <img src="https://i.ibb.co/7dRPCgrB/IMG-2726.jpg" alt="Orbas Logo" class="h-12 w-auto">
-                    </div>
-                    <p class="text-gray-700 leading-relaxed text-lg mb-6">
-                        The complete ecosystem for digital innovation, connecting enterprises with AI-powered solutions,
-                        top talent, learning resources, and automated services that drive business transformation.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="mailto:support@orbas.io" class="text-gray-600 hover:text-black transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                        <a href="https://orbas.io" class="text-gray-600 hover:text-black transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/orbas-global1/" class="text-gray-600 hover:text-black transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.851-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.372-1.849 3.605 0 4.27 2.371 4.27 5.455v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .772 0 1.725v20.451C0 23.228.792 24 1.771 24h20.451C23.2 24 24 23.228 24 22.176V1.725C24 .772 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/orbas_1?igsh=YjVoeG00anEyYXJh&utm_source=qr" class="text-gray-600 hover:text-black transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.333 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.069 1.645.069 4.851s-.012 3.584-.07 4.85c-.062 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.645.069-4.851.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.333-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.266-.069-1.645-.069-4.851s.012-3.584.07-4.85c.062-1.366.333-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.645-.069 4.851-.069zm0-2.163C8.741 0 8.333.013 7.052.072 5.775.13 4.602.372 3.6 1.375 2.597 2.377 2.355 3.55 2.297 4.827 2.238 6.108 2.225 6.516 2.225 12s.013 5.892.072 7.173c.058 1.277.3 2.45 1.303 3.453 1.002 1.002 2.175 1.244 3.452 1.303 1.281.059 1.689.072 7.173.072s5.892-.013 7.173-.072c1.277-.059 2.45-.3 3.453-1.303 1.002-1.002 1.244-2.175 1.303-3.452.059-1.281.072-1.689.072-7.173s-.013-5.892-.072-7.173c-.059-1.277-.301-2.45-1.303-3.453C20.45.372 19.277.13 18 .072 16.719.013 16.311 0 12 0zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.164a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/orbasglobal?s=21" class="text-gray-600 hover:text-black transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25H21.985L14.34 10.899 23.24 21.75H17.1L11.511 14.844 5.21 21.75H1.469L9.725 12.432 1.2 2.25H7.5L12.654 8.387 18.244 2.25ZM17.116 19.92h1.748L6.361 4.059H4.464l12.652 15.861Z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-black">Platforms</h4>
-                    <ul class="space-y-4 text-gray-700">
-                        <li>
-                            <a href="https://ai.orbas.io" class="hover:text-black transition-colors flex items-center">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                                Orbas AI
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://freelance.orbas.io" class="hover:text-black transition-colors flex items-center">
-                                <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                                Orbas Freelance
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://learn.orbas.io" class="hover:text-black transition-colors flex items-center">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                                Orbas Learn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://services.orbas.io" class="hover:text-black transition-colors flex items-center">
-                                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                                Orbas Services
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-black">Company</h4>
-                    <ul class="space-y-4 text-gray-700">
-                        <li>
-                            <a href="index.html#about" class="hover:text-black transition-colors">About Orbas</a>
-                        </li>
-                        <li>
-                            <a href="agency.html" class="hover:text-black transition-colors">Orbas Agency</a>
-                        </li>
-                        <li>
-                            <a href="investors.html" class="hover:text-black transition-colors">Investors</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html" class="hover:text-black transition-colors">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="mailto:privacy@orbas.io" class="hover:text-black transition-colors">Privacy Contact</a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
+          <div class="lg:col-span-2">
+            <div class="rounded-lg p-3 inline-block mb-6">
+              <img
+                src="attached_assets/orbas-logo.png"
+                alt="Orbas Logo"
+                class="h-12 w-auto"
+              />
             </div>
-
-            <div class="border-t border-gray-200 pt-8">
-                <div class="flex flex-col lg:flex-row justify-between items-center">
-                    <p class="text-gray-700 text-lg mb-4 lg:mb-0">
-                        © 2025 Orbas. All rights reserved.
-                    </p>
-                    <div class="flex items-center space-x-8 text-gray-600">
-                        <a href="mailto:support@orbas.io" class="hover:text-black transition-colors">support@orbas.io</a>
-                        <a href="mailto:legal@orbas.io" class="hover:text-black transition-colors">legal@orbas.io</a>
-                        <a href="mailto:privacy@orbas.io" class="hover:text-black transition-colors">privacy@orbas.io</a>
-                        <a href="https://blackridgegroup.online" class="hover:text-black transition-colors">Blackridge Group</a>
-                    </div>
-                </div>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+              The complete ecosystem for digital innovation, connecting
+              enterprises with AI-powered solutions, top talent, learning
+              resources, and automated services that drive business
+              transformation.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="mailto:support@orbas.io"
+                class="text-gray-600 hover:text-black transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://orbas.io"
+                class="text-gray-600 hover:text-black transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/orbas-global1/"
+                class="text-gray-600 hover:text-black transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.851-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.372-1.849 3.605 0 4.27 2.371 4.27 5.455v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .772 0 1.725v20.451C0 23.228.792 24 1.771 24h20.451C23.2 24 24 23.228 24 22.176V1.725C24 .772 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/orbas_1?igsh=YjVoeG00anEyYXJh&utm_source=qr"
+                class="text-gray-600 hover:text-black transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.333 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.069 1.645.069 4.851s-.012 3.584-.07 4.85c-.062 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.645.069-4.851.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.333-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.266-.069-1.645-.069-4.851s.012-3.584.07-4.85c.062-1.366.333-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.645-.069 4.851-.069zm0-2.163C8.741 0 8.333.013 7.052.072 5.775.13 4.602.372 3.6 1.375 2.597 2.377 2.355 3.55 2.297 4.827 2.238 6.108 2.225 6.516 2.225 12s.013 5.892.072 7.173c.058 1.277.3 2.45 1.303 3.453 1.002 1.002 2.175 1.244 3.452 1.303 1.281.059 1.689.072 7.173.072s5.892-.013 7.173-.072c1.277-.059 2.45-.3 3.453-1.303 1.002-1.002 1.244-2.175 1.303-3.452.059-1.281.072-1.689.072-7.173s-.013-5.892-.072-7.173c-.059-1.277-.301-2.45-1.303-3.453C20.45.372 19.277.13 18 .072 16.719.013 16.311 0 12 0zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.164a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://x.com/orbasglobal?s=21"
+                class="text-gray-600 hover:text-black transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25H21.985L14.34 10.899 23.24 21.75H17.1L11.511 14.844 5.21 21.75H1.469L9.725 12.432 1.2 2.25H7.5L12.654 8.387 18.244 2.25ZM17.116 19.92h1.748L6.361 4.059H4.464l12.652 15.861Z"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-black">Platforms</h4>
+            <ul class="space-y-4 text-gray-700">
+              <li>
+                <a
+                  href="https://ai.orbas.io"
+                  class="hover:text-black transition-colors flex items-center"
+                >
+                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  Orbas AI
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://freelance.orbas.io"
+                  class="hover:text-black transition-colors flex items-center"
+                >
+                  <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                  Orbas Freelance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.orbas.io"
+                  class="hover:text-black transition-colors flex items-center"
+                >
+                  <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Orbas Learn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://services.orbas.io"
+                  class="hover:text-black transition-colors flex items-center"
+                >
+                  <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                  Orbas Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-black">Company</h4>
+            <ul class="space-y-4 text-gray-700">
+              <li>
+                <a
+                  href="index.html#about"
+                  class="hover:text-black transition-colors"
+                  >About Orbas</a
+                >
+              </li>
+              <li>
+                <a href="agency.html" class="hover:text-black transition-colors"
+                  >Orbas Agency</a
+                >
+              </li>
+              <li>
+                <a
+                  href="investors.html"
+                  class="hover:text-black transition-colors"
+                  >Investors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy.html"
+                  class="hover:text-black transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:privacy@orbas.io"
+                  class="hover:text-black transition-colors"
+                  >Privacy Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="border-t border-gray-200 pt-8">
+          <div class="flex flex-col lg:flex-row justify-between items-center">
+            <p class="text-gray-700 text-lg mb-4 lg:mb-0">
+              © 2025 Orbas. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-8 text-gray-600">
+              <a
+                href="mailto:support@orbas.io"
+                class="hover:text-black transition-colors"
+                >support@orbas.io</a
+              >
+              <a
+                href="mailto:legal@orbas.io"
+                class="hover:text-black transition-colors"
+                >legal@orbas.io</a
+              >
+              <a
+                href="mailto:privacy@orbas.io"
+                class="hover:text-black transition-colors"
+                >privacy@orbas.io</a
+              >
+              <a
+                href="https://blackridgegroup.online"
+                class="hover:text-black transition-colors"
+                >Blackridge Group</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
       const menuBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
-      if(menuBtn && mobileMenu){
+      if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
 
-        mobileMenu.querySelectorAll("a").forEach(link => {
-          link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () =>
+            mobileMenu.classList.add("hidden"),
+          );
         });
       }
     </script>
 
     <!-- Chatwoot -->
     <script>
-      (function(d,t) {
-        var BASE_URL="https://support.orbas.io";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
+      (function (d, t) {
+        var BASE_URL = "https://support.orbas.io";
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + "/packs/js/sdk.js";
         g.defer = true;
         g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
           window.chatwootSDK.run({
-            websiteToken: 'BqxZWWuiqYY56MzSsbLMTRqn',
-            baseUrl: BASE_URL
-          })
-        }
-      })(document,"script");
+            websiteToken: "BqxZWWuiqYY56MzSsbLMTRqn",
+            baseUrl: BASE_URL,
+          });
+        };
+      })(document, "script");
     </script>
-</body>
+  </body>
 </html>
