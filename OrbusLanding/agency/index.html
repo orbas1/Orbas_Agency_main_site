@@ -55,10 +55,13 @@
           @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
         }
         .btn-primary-sm {
-          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue hover:from-orbas-dark-blue hover:to-orbas-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5;
+          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed;
         }
         .badge {
           @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orbas-blue/20 text-orbas-light-blue border border-orbas-light-blue/30;
+        }
+        .form-input {
+          @apply w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue;
         }
       }
     </style>
@@ -70,7 +73,7 @@
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center">
-            <a href="index.html">
+            <a href="/">
               <img
                 src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png"
                 alt="Orbas Logo"
@@ -82,32 +85,32 @@
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
             <a
-              href="index.html#about"
+              href="/#about"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >About</a
             >
             <a
-              href="index.html#platforms"
+              href="/#platforms"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >Platforms</a
             >
             <a
-              href="agency.html"
+              href="/agency"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >Agency</a
             >
             <a
-              href="investors.html"
+              href="/investors"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >Investors</a
             >
             <a
-              href="index.html#contact"
+              href="/#contact"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >Contact</a
             >
             <a
-              href="privacy.html"
+              href="/privacy"
               class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
               >Privacy</a
             >
@@ -143,29 +146,29 @@
     >
       <nav class="space-y-4 text-center text-lg font-medium">
         <a
-          href="index.html#about"
+          href="/#about"
           class="block text-gray-600 hover:text-orbas-blue"
           >About</a
         >
         <a
-          href="index.html#platforms"
+          href="/#platforms"
           class="block text-gray-600 hover:text-orbas-blue"
           >Platforms</a
         >
-        <a href="agency.html" class="block text-gray-600 hover:text-orbas-blue"
+        <a href="/agency" class="block text-gray-600 hover:text-orbas-blue"
           >Agency</a
         >
         <a
-          href="investors.html"
+          href="/investors"
           class="block text-gray-600 hover:text-orbas-blue"
           >Investors</a
         >
         <a
-          href="index.html#contact"
+          href="/#contact"
           class="block text-gray-600 hover:text-orbas-blue"
           >Contact</a
         >
-        <a href="privacy.html" class="block text-gray-600 hover:text-orbas-blue"
+        <a href="/privacy" class="block text-gray-600 hover:text-orbas-blue"
           >Privacy</a
         >
       </nav>
@@ -502,27 +505,27 @@
         </p>
         <div class="max-w-lg mx-auto bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
           <form id="lead-form" action="https://agency.orbas.io/index.php/collect_leads/save" role="form" method="post" accept-charset="utf-8" class="space-y-4">
-            <input type="text" name="first_name" id="first_name" placeholder="First name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-            <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-            <input type="text" name="company_name" id="company_name" placeholder="Company name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-            <input type="text" name="phone" id="phone" placeholder="Phone" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-            <textarea name="address" id="address" rows="3" placeholder="Address" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"></textarea>
+            <input type="text" name="first_name" id="first_name" placeholder="First name" class="form-input" />
+            <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="form-input" />
+            <input type="text" name="company_name" id="company_name" placeholder="Company name" required class="form-input" />
+            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" class="form-input" />
+            <input type="text" name="phone" id="phone" placeholder="Phone" class="form-input" />
+            <textarea name="address" id="address" rows="3" placeholder="Address" class="form-input"></textarea>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" name="city" id="city" placeholder="City" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-              <input type="text" name="state" id="state" placeholder="State" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+              <input type="text" name="city" id="city" placeholder="City" class="form-input" />
+              <input type="text" name="state" id="state" placeholder="State" class="form-input" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" name="zip" id="zip" placeholder="Zip" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
-              <input type="text" name="country" id="country" placeholder="Country" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+              <input type="text" name="zip" id="zip" placeholder="Zip" class="form-input" />
+              <input type="text" name="country" id="country" placeholder="Country" class="form-input" />
             </div>
             <div class="flex items-start">
               <input id="privacy" type="checkbox" class="mt-1 mr-2">
-              <label for="privacy" class="text-sm text-gray-700">I agree to the <a href="privacy.html" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
+              <label for="privacy" class="text-sm text-gray-900">I agree to the <a href="/privacy" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
             </div>
-            <button id="submit-btn" type="submit" class="btn-primary-sm opacity-50 cursor-not-allowed" disabled>Submit</button>
+            <button id="submit-btn" type="submit" class="btn-primary-sm" disabled>Submit</button>
           </form>
-          <p id="form-message" class="hidden text-center text-sm text-gray-700 mt-4"></p>
+          <p id="form-message" class="hidden text-center text-sm text-gray-900 mt-4"></p>
         </div>
       </div>
     </section>
@@ -646,26 +649,26 @@
             <ul class="space-y-4 text-gray-700">
               <li>
                 <a
-                  href="index.html#about"
+                  href="/#about"
                   class="hover:text-black transition-colors"
                   >About Orbas</a
                 >
               </li>
               <li>
-                <a href="agency.html" class="hover:text-black transition-colors"
+                <a href="/agency" class="hover:text-black transition-colors"
                   >Orbas Agency</a
                 >
               </li>
               <li>
                 <a
-                  href="investors.html"
+                  href="/investors"
                   class="hover:text-black transition-colors"
                   >Investors</a
                 >
               </li>
               <li>
                 <a
-                  href="privacy.html"
+                  href="/privacy"
                   class="hover:text-black transition-colors"
                   >Privacy Policy</a
                 >
@@ -719,8 +722,6 @@
       if (privacyCheckbox && submitBtn) {
         privacyCheckbox.addEventListener('change', () => {
           submitBtn.disabled = !privacyCheckbox.checked;
-          submitBtn.classList.toggle('opacity-50', !privacyCheckbox.checked);
-          submitBtn.classList.toggle('cursor-not-allowed', !privacyCheckbox.checked);
         });
       }
       const leadForm = document.getElementById('lead-form');
@@ -734,7 +735,7 @@
             message.textContent = 'Thank you! We will be in touch soon.';
             message.classList.remove('hidden');
           }
-          setTimeout(() => { window.location.href = 'index.html'; }, 3000);
+          setTimeout(() => { window.location.href = '/'; }, 3000);
         });
       }
 
