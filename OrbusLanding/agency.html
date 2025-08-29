@@ -222,22 +222,9 @@
               class="absolute inset-0 bg-gradient-to-t from-orbas-dark-blue/50 via-transparent to-transparent"
             ></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 flex items-center"
-              >
-                <img
-                  src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png"
-                  alt="Orbas Logo"
-                  class="w-12 h-12 mr-4"
-                />
-                <div>
-                  <h3 class="text-white font-semibold text-lg mb-1">
-                    Full-Service Development
-                  </h3>
-                  <p class="text-gray-200 text-sm">
-                    Delivering sites and apps that scale with your business
-                  </p>
-                </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                <h3 class="text-white font-semibold text-lg mb-1">Full-Service Development</h3>
+                <p class="text-gray-200 text-sm">Delivering sites and apps that scale with your business</p>
               </div>
             </div>
           </div>
@@ -513,95 +500,30 @@
         <p class="text-lg text-center mb-12 text-gray-100">
           Share a few details and our team will reach out shortly.
         </p>
-        <form
-          action="https://agency.orbas.io/index.php/collect_leads/save"
-          method="post"
-          class="grid grid-cols-1 md:grid-cols-2 gap-6"
-        >
-          <input
-            type="text"
-            name="company_name"
-            id="company_name"
-            placeholder="Company name"
-            required
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="first_name"
-            id="first_name"
-            placeholder="First name"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="last_name"
-            id="last_name"
-            placeholder="Last name"
-            required
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            autocomplete="off"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue md:col-span-2"
-          />
-          <textarea
-            name="address"
-            id="address"
-            placeholder="Address"
-            rows="4"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue md:col-span-2"
-          ></textarea>
-          <input
-            type="text"
-            name="city"
-            id="city"
-            placeholder="City"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="state"
-            id="state"
-            placeholder="State"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="zip"
-            id="zip"
-            placeholder="Zip"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="country"
-            id="country"
-            placeholder="Country"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"
-          />
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            placeholder="Phone"
-            class="p-4 rounded-lg bg-white text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-orbas-light-blue md:col-span-2"
-          />
-          <!-- Optional fields to set lead source and owner
-          <input type="hidden" name="lead_source_id" value="1" />
-          <input type="hidden" name="lead_owner_id" value="1" />
-          -->
-          <button
-            type="submit"
-            class="md:col-span-2 btn-primary mt-4"
-          >
-            Submit
-          </button>
-        </form>
+        <div class="max-w-lg mx-auto bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
+          <form id="lead-form" action="https://agency.orbas.io/index.php/collect_leads/save" role="form" method="post" accept-charset="utf-8" class="space-y-4">
+            <input type="text" name="first_name" id="first_name" placeholder="First name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            <input type="text" name="company_name" id="company_name" placeholder="Company name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            <input type="text" name="phone" id="phone" placeholder="Phone" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            <textarea name="address" id="address" rows="3" placeholder="Address" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue"></textarea>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" name="city" id="city" placeholder="City" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+              <input type="text" name="state" id="state" placeholder="State" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" name="zip" id="zip" placeholder="Zip" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+              <input type="text" name="country" id="country" placeholder="Country" class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orbas-light-blue" />
+            </div>
+            <div class="flex items-start">
+              <input id="privacy" type="checkbox" class="mt-1 mr-2">
+              <label for="privacy" class="text-sm text-gray-700">I agree to the <a href="privacy.html" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
+            </div>
+            <button id="submit-btn" type="submit" class="btn-primary-sm opacity-50 cursor-not-allowed" disabled>Submit</button>
+          </form>
+          <p id="form-message" class="hidden text-center text-sm text-gray-700 mt-4"></p>
+        </div>
       </div>
     </section>
 
@@ -792,6 +714,30 @@
     </footer>
 
     <script>
+      const privacyCheckbox = document.getElementById('privacy');
+      const submitBtn = document.getElementById('submit-btn');
+      if (privacyCheckbox && submitBtn) {
+        privacyCheckbox.addEventListener('change', () => {
+          submitBtn.disabled = !privacyCheckbox.checked;
+          submitBtn.classList.toggle('opacity-50', !privacyCheckbox.checked);
+          submitBtn.classList.toggle('cursor-not-allowed', !privacyCheckbox.checked);
+        });
+      }
+      const leadForm = document.getElementById('lead-form');
+      if (leadForm) {
+        leadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const formData = new FormData(leadForm);
+          await fetch(leadForm.action, { method: 'POST', body: formData });
+          const message = document.getElementById('form-message');
+          if (message) {
+            message.textContent = 'Thank you! We will be in touch soon.';
+            message.classList.remove('hidden');
+          }
+          setTimeout(() => { window.location.href = 'index.html'; }, 3000);
+        });
+      }
+
       const menuBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
       if (menuBtn && mobileMenu) {
