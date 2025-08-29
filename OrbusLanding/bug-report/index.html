@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report Form - Orbas</title>
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9mc7JPW7/IMG-2724.png">
+    <link rel="alternate icon" href="https://i.ibb.co/9mc7JPW7/IMG-2724.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        'orbas-blue': '#3b82f6',
+                        'orbas-dark-blue': '#1e40af',
+                        'orbas-light-blue': '#60a5fa',
+                        'orbas-orange': '#f97316',
+                        'orbas-green': '#10b981',
+                        'orbas-purple': '#8b5cf6',
+                        'orbas-pink': '#ec4899',
+                        'orbas-cream': '#fef3c7',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 font-poppins antialiased">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png" alt="Orbas Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/#about" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">About</a>
+                    <a href="/#platforms" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Platforms</a>
+                    <a href="/agency" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Agency</a>
+                    <a href="/investors" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Investors</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Contact</a>
+                    <a href="/privacy" class="text-gray-600 hover:text-orbas-blue font-medium transition-colors">Privacy</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl">
+        <nav class="space-y-4 text-center text-lg font-medium">
+            <a href="/#about" class="block text-gray-600 hover:text-orbas-blue">About</a>
+            <a href="/#platforms" class="block text-gray-600 hover:text-orbas-blue">Platforms</a>
+            <a href="/agency" class="block text-gray-600 hover:text-orbas-blue">Agency</a>
+            <a href="/investors" class="block text-gray-600 hover:text-orbas-blue">Investors</a>
+            <a href="/#contact" class="block text-gray-600 hover:text-orbas-blue">Contact</a>
+            <a href="/privacy" class="block text-gray-600 hover:text-orbas-blue">Privacy</a>
+        </nav>
+    </div>
+
+    <section class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 text-center text-white">
+        <h1 class="text-4xl sm:text-5xl font-bold">Bug Report Form</h1>
+        <p class="mt-2 text-lg">Help us improve the Orbas ecosystem</p>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div id="bug-stats" class="bg-gray-100 p-6 rounded-lg shadow mb-8">
+            <h2 class="text-2xl font-bold mb-4">Current Reports</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div>
+                    <p id="critical-count" class="text-3xl font-bold text-red-600">0</p>
+                    <p class="font-semibold">Critical</p>
+                </div>
+                <div>
+                    <p id="high-count" class="text-3xl font-bold text-orange-500">0</p>
+                    <p class="font-semibold">High</p>
+                </div>
+                <div>
+                    <p id="moderate-count" class="text-3xl font-bold text-yellow-500">0</p>
+                    <p class="font-semibold">Moderate</p>
+                </div>
+                <div>
+                    <p id="low-count" class="text-3xl font-bold text-green-600">0</p>
+                    <p class="font-semibold">Low</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="bug-form" class="bg-white rounded-xl shadow-lg p-8 space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg p-3">
+                </div>
+                <div>
+                    <label for="contact" class="block font-medium mb-2">Email/Contact</label>
+                    <input type="text" id="contact" name="contact" required class="w-full border border-gray-300 rounded-lg p-3">
+                </div>
+                <div>
+                    <label for="country" class="block font-medium mb-2">Country</label>
+                    <input type="text" id="country" name="country" required class="w-full border border-gray-300 rounded-lg p-3">
+                </div>
+                <div>
+                    <label for="error_url" class="block font-medium mb-2">Error URL</label>
+                    <input type="url" id="error_url" name="error_url" required class="w-full border border-gray-300 rounded-lg p-3">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="error_category" class="block font-medium mb-2">Error Category</label>
+                    <input type="text" id="error_category" name="error_category" required class="w-full border border-gray-300 rounded-lg p-3">
+                </div>
+                <div>
+                    <label for="error_level" class="block font-medium mb-2">Error Level</label>
+                    <select id="error_level" name="error_level" required class="w-full border border-gray-300 rounded-lg p-3">
+                        <option value="critical">1. Critical</option>
+                        <option value="high">2. High</option>
+                        <option value="moderate">3. Moderate</option>
+                        <option value="low">4. Low</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="description" class="block font-medium mb-2">Description</label>
+                    <textarea id="description" name="description" rows="5" required class="w-full border border-gray-300 rounded-lg p-3"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg">Submit Bug Report</button>
+        </form>
+    </main>
+
+    <footer class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-black">Platforms</h4>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><a href="https://ai.orbas.io" class="hover:text-black transition-colors flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Orbas AI</a></li>
+                        <li><a href="https://freelance.orbas.io" class="hover:text-black transition-colors flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Orbas Freelance</a></li>
+                        <li><a href="https://learn.orbas.io" class="hover:text-black transition-colors flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Orbas Learn</a></li>
+                        <li><a href="https://services.orbas.io" class="hover:text-black transition-colors flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>Orbas Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-black">Company</h4>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><a href="/#about" class="hover:text-black transition-colors">About Orbas</a></li>
+                        <li><a href="/agency" class="hover:text-black transition-colors">Orbas Agency</a></li>
+                        <li><a href="/investors" class="hover:text-black transition-colors">Investors</a></li>
+                        <li><a href="/privacy" class="hover:text-black transition-colors">Privacy Policy</a></li>
+                        <li><a href="/update-log" class="hover:text-black transition-colors">Update Log</a></li>
+                        <li><a href="/bug-report" class="hover:text-black transition-colors">Bug Report Form</a></li>
+                        <li><a href="mailto:privacy@orbas.io" class="hover:text-black transition-colors">Privacy Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <p class="text-gray-700 text-lg mb-4 lg:mb-0">© 2025 Orbas. All rights reserved.</p>
+                    <div class="flex items-center space-x-8 text-gray-600">
+                        <a href="mailto:support@orbas.io" class="hover:text-black transition-colors">support@orbas.io</a>
+                        <a href="mailto:legal@orbas.io" class="hover:text-black transition-colors">legal@orbas.io</a>
+                        <a href="mailto:privacy@orbas.io" class="hover:text-black transition-colors">privacy@orbas.io</a>
+                        <a href="https://blackridgegroup.online" class="hover:text-black transition-colors">Blackridge Group</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if(menuBtn && mobileMenu){
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+            });
+        }
+
+        async function fetchCounts(){
+            try {
+                const res = await fetch('/bug-report-counts');
+                if(res.ok){
+                    const data = await res.json();
+                    document.getElementById('critical-count').textContent = data.critical;
+                    document.getElementById('high-count').textContent = data.high;
+                    document.getElementById('moderate-count').textContent = data.moderate;
+                    document.getElementById('low-count').textContent = data.low;
+                }
+            } catch(err){
+                console.error(err);
+            }
+        }
+        fetchCounts();
+        setInterval(fetchCounts, 21600000); // every 6 hours
+
+        const form = document.getElementById('bug-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const res = await fetch('/submit-bug', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            });
+            if(res.ok){
+                alert('Bug report submitted. Thank you!');
+                form.reset();
+                fetchCounts();
+            } else {
+                alert('There was a problem submitting your report.');
+            }
+        });
+    </script>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://support.orbas.io";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'BqxZWWuiqYY56MzSsbLMTRqn',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+</body>
+</html>
+
