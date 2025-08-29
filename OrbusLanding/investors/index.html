@@ -76,7 +76,8 @@
     </div>
 
     <section class="relative isolate overflow-hidden bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 py-32 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 -z-10">
+        <canvas id="investor-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+        <div class="absolute inset-0 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 bg-orbas-blue/40 blur-3xl rounded-full"></div>
             <div class="absolute bottom-0 right-0 w-80 h-80 bg-orbas-purple/40 blur-2xl rounded-full"></div>
         </div>
@@ -85,8 +86,8 @@
                 <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-6 leading-tight">Invest in Orbas</h1>
                 <p class="text-lg sm:text-xl text-gray-200 mb-10 leading-relaxed">Join us as we reshape global professional services with AI, planned blockchain integration and 24/7 automation.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <a href="mailto:support@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-orbas-blue text-white font-semibold rounded-xl shadow-lg hover:bg-orbas-dark-blue transition-all">Contact Investor Relations</a>
-                    <a href="#vision" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all">Our Vision</a>
+                    <a href="mailto:support@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-orbas-blue/80 hover:bg-orbas-dark-blue/80 text-white font-semibold rounded-xl shadow-lg transition-all backdrop-blur-md border border-white/20">Contact Investor Relations</a>
+                    <a href="#vision" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all backdrop-blur-md bg-white/5">Our Vision</a>
                 </div>
             </div>
             <div class="relative">
@@ -143,8 +144,8 @@
             <h2 class="text-3xl sm:text-4xl font-bold mb-6">Be Part of the Journey</h2>
             <p class="text-lg mb-8">We're preparing an investor brief outlining our roadmap and funding plans. Reach out to explore how we can grow together.</p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="mailto:support@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:bg-gray-100 transition-all">Request Investor Brief</a>
-                <a href="mailto:support@orbas.io?subject=Schedule%20a%20Call" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all">Schedule a Call</a>
+                <a href="mailto:support@orbas.io" class="inline-flex items-center justify-center px-8 py-4 bg-white/20 hover:bg-white/30 text-blue-700 font-semibold rounded-xl shadow-lg transition-all backdrop-blur-md border border-white/20">Request Investor Brief</a>
+                <a href="mailto:support@orbas.io?subject=Schedule%20a%20Call" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all backdrop-blur-md border border-white/20">Schedule a Call</a>
             </div>
         </div>
     </section>
@@ -232,6 +233,15 @@
       }
     </script>
 
+    <script src="../hero-nodes.js"></script>
+    <script>
+      initHeroNodes('investor-hero-canvas', {
+        nodeColor: '#8b5cf6',
+        lineColor: 'rgba(139,92,246,0.3)',
+        nodeCount: 60,
+        connectionDistance: 150
+      });
+    </script>
     <script>
       (function(d,t) {
         var BASE_URL="https://support.orbas.io";
