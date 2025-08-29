@@ -47,7 +47,8 @@
             100% { transform: translateX(100%); }
         }
         .ticker-animation {
-            animation: ticker 40s linear infinite;
+            animation: ticker 60s linear infinite;
+            will-change: transform;
         }
     </style>
 </head>
@@ -163,14 +164,14 @@
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-red-600 text-white overflow-hidden">
             <div class="ticker flex whitespace-nowrap ticker-animation">
-                <div class="px-8 flex items-center text-right">Orbas AI: Out Now!</div>
-                <div class="px-8 flex items-center text-right">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-16T00:00:00Z"></span><span class="end-date">(16/09/2025)</span></div>
-                <div class="px-8 flex items-center text-right">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-18T00:00:00Z"></span><span class="end-date">(18/09/2025)</span></div>
-                <div class="px-8 flex items-center text-right">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-17T00:00:00Z"></span><span class="end-date">(17/09/2025)</span></div>
-                <div class="px-8 flex items-center text-right">Orbas AI: Out Now!</div>
-                <div class="px-8 flex items-center text-right">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-16T00:00:00Z"></span><span class="end-date">(16/09/2025)</span></div>
-                <div class="px-8 flex items-center text-right">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-18T00:00:00Z"></span><span class="end-date">(18/09/2025)</span></div>
-                <div class="px-8 flex items-center text-right">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-17T00:00:00Z"></span><span class="end-date">(17/09/2025)</span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas AI: Out Now!</div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-16T00:00:00Z"></span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-18T00:00:00Z"></span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-17T00:00:00Z"></span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas AI: Out Now!</div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-16T00:00:00Z"></span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-18T00:00:00Z"></span></div>
+                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-17T00:00:00Z"></span></div>
             </div>
         </div>
     </section>
@@ -599,6 +600,16 @@
                         <li>
                             <a href="privacy" class="hover:text-black transition-colors">
                                 Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="update-log" class="hover:text-black transition-colors">
+                                Update Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bug-report" class="hover:text-black transition-colors">
+                                Bug Report Form
                             </a>
                         </li>
                         <li>
