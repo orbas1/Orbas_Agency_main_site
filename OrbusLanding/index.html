@@ -7,6 +7,7 @@
     <meta name="description" content="Enterprise-ready ecosystem unifying AI automation, professional talent, learning resources and 24/7 services. Discover our vision to integrate blockchain and create the ultimate professional platform.">
     <meta name="keywords" content="Orbas, AI automation, freelance platform, learning management, digital services, web agency, blockchain, investors">
     <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://i.ibb.co data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://agency.orbas.io; form-action 'self' https://agency.orbas.io; base-uri 'self';">
     <meta property="og:title" content="Orbas Ecosystem - Digital Transformation Partner">
     <meta property="og:description" content="Enterprise-ready ecosystem unifying AI automation, professional talent, learning resources and 24/7 services.">
     <meta property="og:type" content="website">
@@ -16,12 +17,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png">
     <link rel="alternate icon" href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png">
-    
+    <link rel="canonical" href="https://orbas.io/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300..800;1,300..800&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300..800;1,300..800&display=swap"></noscript>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -31,7 +35,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif']
+                        'poppins': ['Poppins','ui-sans-serif','system-ui','sans-serif']
                     },
                     colors: {
                         'orbas-blue': '#3b82f6',
@@ -47,16 +51,18 @@
             }
         }
     </script>
-    <style>
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .ticker-animation {
-            animation: ticker 30s linear infinite;
-            will-change: transform;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Orbas",
+      "url": "https://orbas.io/",
+      "logo": "https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png",
+      "contactPoint": [{"@type":"ContactPoint","email":"support@orbas.io","contactType":"customer support"}]
+    }
+    </script>
 </head>
 <body class="bg-white text-gray-900 font-poppins antialiased">
     <div id="header"></div>
@@ -89,19 +95,19 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-6">
-                        <a href="#platforms" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <a href="#platforms" data-track="explore-platforms" aria-label="Explore Platforms" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Explore Platforms
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <a href="#contact" data-track="contact-sales" aria-label="Contact Sales" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Contact Sales
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <a href="agency" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <a href="agency" data-track="work-with-agency" aria-label="Work with Our Agency" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Work with Our Agency
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -113,7 +119,7 @@
                 <!-- Right image -->
                 <div class="relative">
                     <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="attached_assets/ai_1752430264374.jpg" alt="AI Innovation" class="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-700">
+                        <img src="attached_assets/ai_1752430264374.jpg" alt="AI Innovation" class="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-700" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
@@ -182,9 +188,9 @@
                 </ul>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <img src="https://i.ibb.co/20nQhW01/8010.jpg" alt="Global ecosystem" class="rounded-xl shadow-lg object-cover w-full h-56">
-                <img src="https://i.ibb.co/VWLKCgmK/3d-rendering-blockchain-technology.jpg" alt="Blockchain technology" class="rounded-xl shadow-lg object-cover w-full h-56">
-                <img src="https://i.ibb.co/4gw776VQ/129780.jpg" alt="Artificial intelligence" class="rounded-xl shadow-lg object-cover w-full h-56 sm:col-span-2">
+                <img src="https://i.ibb.co/20nQhW01/8010.jpg" alt="Global ecosystem" class="rounded-xl shadow-lg object-cover w-full h-56" loading="lazy">
+                <img src="https://i.ibb.co/VWLKCgmK/3d-rendering-blockchain-technology.jpg" alt="Blockchain technology" class="rounded-xl shadow-lg object-cover w-full h-56" loading="lazy">
+                <img src="https://i.ibb.co/4gw776VQ/129780.jpg" alt="Artificial intelligence" class="rounded-xl shadow-lg object-cover w-full h-56 sm:col-span-2" loading="lazy">
             </div>
         </div>
     </section>
@@ -209,7 +215,7 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-blue-600/10"></div>
                         <div class="text-center relative z-10">
                             <div class="w-24 h-24 mx-auto mb-3 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="attached_assets/Orbas ai_1752430278516.png" alt="Orbas AI" class="w-16 h-16 object-contain">
+                                <img src="attached_assets/Orbas ai_1752430278516.png" alt="Orbas AI" class="w-16 h-16 object-contain" loading="lazy">
                             </div>
                             <p class="text-purple-600 font-semibold">AI Innovation Suite</p>
                         </div>
@@ -259,7 +265,7 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10"></div>
                         <div class="text-center relative z-10">
                             <div class="w-24 h-24 mx-auto mb-3 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="attached_assets/orbas freelance_1752430278517.png" alt="Orbas Freelance" class="w-16 h-16 object-contain">
+                                <img src="attached_assets/orbas freelance_1752430278517.png" alt="Orbas Freelance" class="w-16 h-16 object-contain" loading="lazy">
                             </div>
                             <p class="text-orange-600 font-semibold">Premium Marketplace</p>
                         </div>
@@ -309,7 +315,7 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-600/10 to-purple-600/10"></div>
                         <div class="text-center relative z-10">
                             <div class="w-24 h-24 mx-auto mb-3 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="attached_assets/Orbas Learn_1752430278517.png" alt="Orbas Learn" class="w-16 h-16 object-contain">
+                                <img src="attached_assets/Orbas Learn_1752430278517.png" alt="Orbas Learn" class="w-16 h-16 object-contain" loading="lazy">
                             </div>
                             <p class="text-blue-600 font-semibold">Educational Community</p>
                         </div>
@@ -359,7 +365,7 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-600/10"></div>
                         <div class="text-center relative z-10">
                             <div class="w-24 h-24 mx-auto mb-3 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="attached_assets/Orbas services_1752430278511.png" alt="Orbas Services" class="w-16 h-16 object-contain">
+                                <img src="attached_assets/Orbas services_1752430278511.png" alt="Orbas Services" class="w-16 h-16 object-contain" loading="lazy">
                             </div>
                             <p class="text-blue-600 font-semibold">On-Demand Services</p>
                         </div>
@@ -473,31 +479,6 @@
     <!-- Footer -->
     <div id="footer"></div>
     <script src="/layout.js"></script>
-    <script>
-      document.querySelectorAll('.countdown').forEach(el => {
-        const end = new Date(el.dataset.end);
-        const update = () => {
-          const now = new Date();
-          let diff = end - now;
-          if (diff <= 0) {
-            el.innerHTML = 'Out Now!';
-            const dateEl = el.nextElementSibling;
-            if (dateEl) dateEl.remove();
-            return;
-          }
-          const pad = n => String(n).padStart(2, '0');
-          const days = Math.floor(diff / 86400000);
-          diff %= 86400000;
-          const hours = Math.floor(diff / 3600000);
-          diff %= 3600000;
-          const mins = Math.floor(diff / 60000);
-          diff %= 60000;
-          const secs = Math.floor(diff / 1000);
-          el.innerHTML = `${days}d<span class="mx-1 animate-pulse">:</span>${pad(hours)}h<span class="mx-1 animate-pulse">:</span>${pad(mins)}m<span class="mx-1 animate-pulse">:</span>${pad(secs)}s`;
-        };
-        update();
-        setInterval(update, 1000);
-      });
-    </script>
+    <script src="/assets/main.js"></script>
     </body>
 </html>
