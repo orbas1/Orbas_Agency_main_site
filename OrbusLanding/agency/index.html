@@ -9,6 +9,7 @@
       content="Professional agency offering whitelabel websites, mobile apps, AI automations and marketing solutions with 24/7 support."
     />
     <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://i.ibb.co data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://cdn.tailwindcss.com; connect-src 'self' https://agency.orbas.io; form-action 'self' https://agency.orbas.io; base-uri 'self';" />
 
     <!-- Favicon -->
     <link
@@ -17,14 +18,13 @@
       href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png"
     />
     <link rel="alternate icon" href="https://i.ibb.co/GQ5xBY5S/IMG-2726-removebg-preview-1.png" />
+    <link rel="canonical" href="https://orbas.io/agency" />
 
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300..800;1,300..800&display=swap" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300..800;1,300..800&display=swap" /></noscript>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,7 +35,7 @@
         theme: {
           extend: {
             fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
+              poppins: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
             },
             colors: {
               "orbas-blue": "#3b82f6",
@@ -50,141 +50,22 @@
         },
       };
     </script>
-    <style type="text/tailwindcss">
-      @layer components {
-        .btn-primary {
-          @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
-        }
-        .btn-primary-sm {
-          @apply w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed;
-        }
-        .badge {
-          @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orbas-blue/20 text-orbas-light-blue border border-orbas-light-blue/30;
-        }
-        .form-input {
-          @apply w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue;
-        }
-      }
-    </style>
-  </head>
+    <link rel="stylesheet" href="../assets/styles.css" />
+      </head>
   <body class="bg-white text-gray-900 font-poppins antialiased">
-    <!-- Header Navigation -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="flex items-center">
-            <a href="/">
-              <img
-                src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png"
-                alt="Orbas Logo"
-                class="h-12 w-auto"
-              />
-            </a>
-          </div>
-
-          <!-- Navigation -->
-          <nav class="hidden md:flex space-x-8">
-            <a
-              href="/#about"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >About</a
-            >
-            <a
-              href="/#platforms"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >Platforms</a
-            >
-            <a
-              href="/agency"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >Agency</a
-            >
-            <a
-              href="/investors"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >Investors</a
-            >
-            <a
-              href="/#contact"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >Contact</a
-            >
-            <a
-              href="/privacy"
-              class="text-gray-600 hover:text-orbas-blue font-medium transition-colors"
-              >Privacy</a
-            >
-          </nav>
-
-          <!-- Mobile menu button -->
-          <button
-            id="mobile-menu-btn"
-            class="md:hidden text-gray-600 hover:text-orbas-blue focus:outline-none"
-          >
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobile-menu"
-      class="md:hidden hidden fixed top-16 left-0 right-0 z-40 px-6 py-6 bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200 rounded-b-xl"
-    >
-      <nav class="space-y-4 text-center text-lg font-medium">
-        <a
-          href="/#about"
-          class="block text-gray-600 hover:text-orbas-blue"
-          >About</a
-        >
-        <a
-          href="/#platforms"
-          class="block text-gray-600 hover:text-orbas-blue"
-          >Platforms</a
-        >
-        <a href="/agency" class="block text-gray-600 hover:text-orbas-blue"
-          >Agency</a
-        >
-        <a
-          href="/investors"
-          class="block text-gray-600 hover:text-orbas-blue"
-          >Investors</a
-        >
-        <a
-          href="/#contact"
-          class="block text-gray-600 hover:text-orbas-blue"
-          >Contact</a
-        >
-        <a href="/privacy" class="block text-gray-600 hover:text-orbas-blue"
-          >Privacy</a
-        >
-      </nav>
-    </div>
+    <div id="header"></div>
 
     <!-- Hero Section -->
     <section
       class="relative bg-gradient-to-br from-gray-900 via-orbas-dark-blue to-orbas-blue py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
+      <canvas class="absolute inset-0 w-full h-full hero-network pointer-events-none" data-color="#ec4899" data-count="50"></canvas>
       <div class="absolute inset-0 bg-black/20"></div>
       <div
         class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <div class="badge mb-6">
+          <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orbas-blue/20 text-orbas-light-blue border border-orbas-light-blue/30 mb-6">
             <span class="mr-2">🚀</span>
             24/7 World Class Web Solutions
           </div>
@@ -198,7 +79,7 @@
             automations to accelerate your growth. Chat with us any time—tell us
             your budget and we’ll make it work.
           </p>
-          <a href="mailto:agency@orbas.io" class="btn-primary">
+          <a href="mailto:agency@orbas.io" data-track="agency-contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Contact Agency
             <svg
               class="ml-2 w-5 h-5"
@@ -220,13 +101,12 @@
             <img
               src="https://i.ibb.co/Q7FS0GJ8/b34f2ac7-da27-49d4-ba42-938607b02fa1.png"
               alt="AI robot sitting cross-legged"
-              class="w-full h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700"
-            />
+              class="w-full h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700" loading="lazy"/>
             <div
               class="absolute inset-0 bg-gradient-to-t from-orbas-dark-blue/50 via-transparent to-transparent"
             ></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+              <div class="glass rounded-xl p-4">
                 <h3 class="text-white font-semibold text-lg mb-1">Full-Service Development</h3>
                 <p class="text-gray-200 text-sm">Delivering sites and apps that scale with your business</p>
               </div>
@@ -269,8 +149,7 @@
           <img
             src="https://i.ibb.co/F4JfrrvM/still-life-business-roles-with-various-mechanism-pieces.jpg"
             alt="Still life of business roles with mechanism pieces"
-            class="rounded-xl shadow-xl object-cover w-full h-96"
-          />
+            class="rounded-xl shadow-xl object-cover w-full h-96" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -326,8 +205,7 @@
           <img
             src="https://i.ibb.co/mCZ7MWgX/representation-user-experience-interface-design.jpg"
             alt="Design in progress"
-            class="rounded-xl shadow-xl object-cover w-full h-96"
-          />
+            class="rounded-xl shadow-xl object-cover w-full h-96" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -361,7 +239,7 @@
               solutions built for growth
             </li>
           </ul>
-          <a href="mailto:agency@orbas.io" class="btn-primary"
+          <a href="mailto:agency@orbas.io" data-track="agency-contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orbas-blue to-orbas-dark-blue text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >Get Your Free Quote</a
           >
         </div>
@@ -369,8 +247,7 @@
           <img
             src="https://i.ibb.co/bMW84g3n/1634.jpg"
             alt="Project planning"
-            class="rounded-xl shadow-xl object-cover w-full h-96"
-          />
+            class="rounded-xl shadow-xl object-cover w-full h-96" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -383,7 +260,7 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition"
+            class="flex flex-col p-8 glass rounded-2xl shadow-xl hover:shadow-2xl transition"
           >
             <h3 class="text-2xl font-bold mb-4">Launch Package</h3>
             <p class="text-gray-600 mb-6">
@@ -405,13 +282,13 @@
               From £999
             </p>
             <a
-              href="mailto:agency@orbas.io?subject=Launch%20Package"
-              class="btn-primary-sm"
+              href="mailto:agency@orbas.io?subject=Launch%20Package" data-track="package-launch"
+              class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >Get Started</a
             >
           </div>
           <div
-            class="relative flex flex-col p-8 bg-white rounded-2xl shadow-xl border-2 border-orbas-blue md:scale-105 md:-translate-y-2"
+            class="relative flex flex-col p-8 glass rounded-2xl shadow-xl border-2 border-orbas-blue md:scale-105 md:-translate-y-2"
           >
             <div
               class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orbas-blue text-white text-xs font-semibold px-3 py-1 rounded-full shadow"
@@ -438,13 +315,13 @@
               From £2,500
             </p>
             <a
-              href="mailto:agency@orbas.io?subject=Growth%20Package"
-              class="btn-primary-sm"
+              href="mailto:agency@orbas.io?subject=Growth%20Package" data-track="package-growth"
+              class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >Request Proposal</a
             >
           </div>
           <div
-            class="flex flex-col p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition"
+            class="flex flex-col p-8 glass rounded-2xl shadow-xl hover:shadow-2xl transition"
           >
             <h3 class="text-2xl font-bold mb-4">Enterprise Package</h3>
             <p class="text-gray-600 mb-6">
@@ -468,15 +345,15 @@
               From £10,000
             </p>
             <a
-              href="mailto:agency@orbas.io?subject=Enterprise%20Package"
-              class="btn-primary-sm"
+              href="mailto:agency@orbas.io?subject=Enterprise%20Package" data-track="package-enterprise"
+              class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >Request Proposal</a
             >
           </div>
         </div>
         <p class="mt-8 text-gray-600">
           Ready to accelerate your next project? Contact
-          <a href="mailto:agency@orbas.io" class="text-orbas-blue underline">agency@orbas.io</a>
+          <a href="mailto:agency@orbas.io" data-track="agency-contact" class="text-orbas-blue underline">agency@orbas.io</a>
           or open the chat bubble with your objectives and budget. Our consultants will craft a bespoke proposal.
         </p>
         <p class="mt-4 text-gray-600">
@@ -498,275 +375,37 @@
         <p class="text-lg text-center mb-12 text-gray-100">
           Share a few details and our team will reach out shortly.
         </p>
-        <div class="max-w-lg mx-auto bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
+        <div class="max-w-lg mx-auto glass text-gray-900 rounded-2xl shadow-2xl p-8">
           <form id="lead-form" action="https://agency.orbas.io/index.php/collect_leads/save" role="form" method="post" accept-charset="utf-8" class="space-y-4">
-            <input type="text" name="first_name" id="first_name" placeholder="First name" class="form-input" />
-            <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="form-input" />
-            <input type="text" name="company_name" id="company_name" placeholder="Company name" required class="form-input" />
-            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" class="form-input" />
-            <input type="text" name="phone" id="phone" placeholder="Phone" class="form-input" />
-            <textarea name="address" id="address" rows="3" placeholder="Address" class="form-input"></textarea>
+            <input type="text" name="first_name" id="first_name" placeholder="First name" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+            <input type="text" name="last_name" id="last_name" placeholder="Last name" required class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+            <input type="text" name="company_name" id="company_name" placeholder="Company name" required class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+            <input type="text" name="phone" id="phone" placeholder="Phone" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+            <textarea name="address" id="address" rows="3" placeholder="Address" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue"></textarea>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" name="city" id="city" placeholder="City" class="form-input" />
-              <input type="text" name="state" id="state" placeholder="State" class="form-input" />
+              <input type="text" name="city" id="city" placeholder="City" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+              <input type="text" name="state" id="state" placeholder="State" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" name="zip" id="zip" placeholder="Zip" class="form-input" />
-              <input type="text" name="country" id="country" placeholder="Country" class="form-input" />
+              <input type="text" name="zip" id="zip" placeholder="Zip" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
+              <input type="text" name="country" id="country" placeholder="Country" class="w-full p-3 rounded-lg border-2 border-orbas-dark-blue text-gray-900 placeholder-gray-600 shadow-md focus:outline-none focus:ring-2 focus:ring-orbas-light-blue focus:border-orbas-blue" />
             </div>
             <div class="flex items-start">
               <input id="privacy" type="checkbox" class="mt-1 mr-2">
               <label for="privacy" class="text-sm text-gray-900">I agree to the <a href="/privacy" target="_blank" class="text-orbas-blue underline">privacy policy</a></label>
             </div>
-            <button id="submit-btn" type="submit" class="btn-primary-sm" disabled>Submit</button>
+            <button id="submit-btn" type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orbas-dark-blue to-orbas-blue hover:from-orbas-blue hover:to-orbas-dark-blue text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Submit</button>
           </form>
           <p id="form-message" class="hidden text-center text-sm text-gray-900 mt-4"></p>
+          <p class="text-xs text-gray-500 mt-2">We retain submitted data for 12 months to support your enquiry.</p>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-black">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
-          <div class="lg:col-span-2">
-            <div class="rounded-lg p-3 inline-block mb-6">
-              <img
-                src="https://i.ibb.co/gLcRkc8k/IMG-2726-removebg-preview.png"
-                alt="Orbas Logo"
-                class="h-12 w-auto"
-              />
-            </div>
-            <p class="text-gray-700 leading-relaxed text-lg mb-6">
-              The complete ecosystem for digital innovation, connecting
-              enterprises with AI-powered solutions, top talent, learning
-              resources, and automated services that drive business
-              transformation.
-            </p>
-            <div class="flex space-x-6">
-              <a
-                href="mailto:support@orbas.io"
-                class="text-gray-600 hover:text-black transition-colors"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                  />
-                </svg>
-              </a>
-              <a
-                class="text-gray-600 hover:text-black transition-colors"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/orbas-global1/"
-                class="text-gray-600 hover:text-black transition-colors"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.851-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.372-1.849 3.605 0 4.27 2.371 4.27 5.455v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .772 0 1.725v20.451C0 23.228.792 24 1.771 24h20.451C23.2 24 24 23.228 24 22.176V1.725C24 .772 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/orbas_1?igsh=YjVoeG00anEyYXJh&utm_source=qr"
-                class="text-gray-600 hover:text-black transition-colors"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm10.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
-                </svg>
-              </a>
-              <a
-                href="https://x.com/orbasglobal?s=21"
-                class="text-gray-600 hover:text-black transition-colors"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M18.244 2.25H21.985L14.34 10.899 23.24 21.75H17.1L11.511 14.844 5.21 21.75H1.469L9.725 12.432 1.2 2.25H7.5L12.654 8.387 18.244 2.25ZM17.116 19.92h1.748L6.361 4.059H4.464l12.652 15.861Z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-6 text-black">Platforms</h4>
-            <ul class="space-y-4 text-gray-700">
-              <li>
-                <a
-                  href="https://ai.orbas.io"
-                  class="hover:text-black transition-colors flex items-center"
-                >
-                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  Orbas AI
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://freelance.orbas.io"
-                  class="hover:text-black transition-colors flex items-center"
-                >
-                  <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Orbas Freelance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://learn.orbas.io"
-                  class="hover:text-black transition-colors flex items-center"
-                >
-                  <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Orbas Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://services.orbas.io"
-                  class="hover:text-black transition-colors flex items-center"
-                >
-                  <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                  Orbas Services
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-6 text-black">Company</h4>
-            <ul class="space-y-4 text-gray-700">
-              <li>
-                <a
-                  href="/#about"
-                  class="hover:text-black transition-colors"
-                  >About Orbas</a
-                >
-              </li>
-              <li>
-                <a href="/agency" class="hover:text-black transition-colors"
-                  >Orbas Agency</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/investors"
-                  class="hover:text-black transition-colors"
-                  >Investors</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/privacy"
-                  class="hover:text-black transition-colors"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="/change-update-log" class="hover:text-black transition-colors">Change & Update Log</a>
-              </li>
-              <li>              </li>
-              <li>
-                <a
-                  href="mailto:privacy@orbas.io"
-                  class="hover:text-black transition-colors"
-                  >Privacy Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-200 pt-8">
-          <div class="flex flex-col lg:flex-row justify-between items-center">
-            <p class="text-gray-700 text-lg mb-4 lg:mb-0">
-              © 2025 Orbas. All rights reserved.
-            </p>
-            <div class="flex items-center space-x-8 text-gray-600">
-              <a
-                href="mailto:support@orbas.io"
-                class="hover:text-black transition-colors"
-                >support@orbas.io</a
-              >
-              <a
-                href="mailto:legal@orbas.io"
-                class="hover:text-black transition-colors"
-                >legal@orbas.io</a
-              >
-              <a
-                href="mailto:privacy@orbas.io"
-                class="hover:text-black transition-colors"
-                >privacy@orbas.io</a
-              >
-              <a
-                href="https://blackridgegroup.online"
-                class="hover:text-black transition-colors"
-                >Blackridge Group</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      const privacyCheckbox = document.getElementById('privacy');
-      const submitBtn = document.getElementById('submit-btn');
-      if (privacyCheckbox && submitBtn) {
-        privacyCheckbox.addEventListener('change', () => {
-          submitBtn.disabled = !privacyCheckbox.checked;
-        });
-      }
-      const leadForm = document.getElementById('lead-form');
-      if (leadForm) {
-        leadForm.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const formData = new FormData(leadForm);
-          await fetch(leadForm.action, { method: 'POST', body: formData });
-          const message = document.getElementById('form-message');
-          if (message) {
-            message.textContent = 'Thank you! We will be in touch soon.';
-            message.classList.remove('hidden');
-          }
-          setTimeout(() => { window.location.href = '/'; }, 3000);
-        });
-      }
-
-      const menuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () =>
-            mobileMenu.classList.add("hidden"),
-          );
-        });
-      }
-    </script>
-
-    <!-- Chatwoot -->
-    <script>
-      (function (d, t) {
-        var BASE_URL = "https://support.orbas.io";
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src = BASE_URL + "/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function () {
-          window.chatwootSDK.run({
-            websiteToken: "BqxZWWuiqYY56MzSsbLMTRqn",
-            baseUrl: BASE_URL,
-          });
-        };
-      })(document, "script");
-    </script>
+    <div id="footer"></div>
+    <script src="../layout.js"></script>
+    <script src="../assets/main.js"></script>
   </body>
 </html>
