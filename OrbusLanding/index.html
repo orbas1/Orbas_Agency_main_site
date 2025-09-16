@@ -47,16 +47,6 @@
             }
         }
     </script>
-    <style>
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .ticker-animation {
-            animation: ticker 15s linear infinite;
-            will-change: transform;
-        }
-    </style>
 </head>
 <body class="bg-white text-gray-900 font-poppins antialiased">
     <div id="header"></div>
@@ -128,18 +118,6 @@
                     <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-60 animate-bounce"></div>
                     <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full opacity-40 animate-bounce"></div>
                 </div>
-            </div>
-        </div>
-        <div class="absolute bottom-0 left-0 w-full bg-red-600 text-white overflow-hidden">
-            <div class="ticker flex whitespace-nowrap ticker-animation">
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas AI: Out Now!</div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-23T00:00:00Z"></span></div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-25T00:00:00Z"></span></div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-24T00:00:00Z"></span></div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas AI: Out Now!</div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Freelance: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-23T00:00:00Z"></span></div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Learn: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-25T00:00:00Z"></span></div>
-                <div class="px-8 flex items-center text-right font-bold text-lg">Orbas Services: Upgrading All Systems <span class="countdown mx-2" data-end="2025-09-24T00:00:00Z"></span></div>
             </div>
         </div>
     </section>
@@ -228,7 +206,7 @@
                                 <svg class="w-4 h-4 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                Social Media Branding Suite
+                                Intelligent Automation Toolkit
                             </li>
                             <li class="flex items-center text-sm text-gray-600">
                                 <svg class="w-4 h-4 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -340,7 +318,7 @@
                                 <svg class="w-4 h-4 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                Community & AI Course Assistance
+                                Ebooks & AI Course Assistance
                             </li>
                         </ul>
                         
@@ -483,31 +461,5 @@
       });
     </script>
     <script src="/layout.js"></script>
-    <script>
-      document.querySelectorAll('.countdown').forEach(el => {
-        const end = new Date(el.dataset.end);
-        const update = () => {
-          const now = new Date();
-          let diff = end - now;
-          if (diff <= 0) {
-            el.innerHTML = 'Out Now!';
-            const dateEl = el.nextElementSibling;
-            if (dateEl) dateEl.remove();
-            return;
-          }
-          const pad = n => String(n).padStart(2, '0');
-          const days = Math.floor(diff / 86400000);
-          diff %= 86400000;
-          const hours = Math.floor(diff / 3600000);
-          diff %= 3600000;
-          const mins = Math.floor(diff / 60000);
-          diff %= 60000;
-          const secs = Math.floor(diff / 1000);
-          el.innerHTML = `${days}d<span class="mx-1 animate-pulse">:</span>${pad(hours)}h<span class="mx-1 animate-pulse">:</span>${pad(mins)}m<span class="mx-1 animate-pulse">:</span>${pad(secs)}s`;
-        };
-        update();
-        setInterval(update, 1000);
-      });
-    </script>
     </body>
 </html>
