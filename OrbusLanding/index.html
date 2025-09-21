@@ -56,7 +56,7 @@
         <canvas id="home-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
         <!-- Background overlay -->
         <div class="absolute inset-0 bg-black/20"></div>
-        
+
         <div class="relative max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <!-- Left content -->
@@ -66,7 +66,7 @@
                         <span class="mr-2">⚡</span>
                         Unleash Innovation with Intelligent Automation
                     </div>
-                    
+
                     <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                         The Complete
                         <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -74,11 +74,11 @@
                         </span>
                         for Digital Transformation
                     </h1>
-                    
+
                     <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
                         Four integrated platforms unify AI automation, vetted professionals, curated learning and always-on services—with agency expertise available whenever you need it.
                     </p>
-                    
+
                     <div class="flex flex-col sm:flex-row gap-6">
                         <a href="#platforms" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600/80 to-purple-600/80 hover:from-blue-700/80 hover:to-purple-700/80 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border border-white/20">
                             Explore Platforms
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Right image -->
                 <div class="relative">
                     <div class="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Floating elements -->
                     <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-60 animate-bounce"></div>
                     <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full opacity-40 animate-bounce"></div>
@@ -167,7 +167,55 @@
             </div>
         </div>
     </section>
-                
+
+    <!-- Intelligent Automation Visual -->
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.3),_transparent_55%)]"></div>
+        <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <p class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20 mb-6">
+                    <span class="mr-2">🪐</span>
+                    Live Network Visual
+                </p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">See the Orbas Data Mesh in Motion</h2>
+                <p class="text-lg text-blue-100/90 leading-relaxed mb-6">
+                    This dynamic orb mirrors the real-time activity inside our ecosystem. Each node represents an automation, specialist or learning stream connecting across platforms to deliver seamless outcomes day and night.
+                </p>
+                <ul class="space-y-3 text-blue-100/80">
+                    <li class="flex items-start">
+                        <span class="mr-3 mt-1 text-blue-300">•</span>
+                        Responsive rendering keeps the visual crisp on phones, tablets and desktops.
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 mt-1 text-blue-300">•</span>
+                        Wobbling nodes and glowing trails highlight high-impact automations.
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 mt-1 text-blue-300">•</span>
+                        Lightweight canvas animation loads instantly without blocking content.
+                    </li>
+                </ul>
+            </div>
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-[420px] aspect-square mx-auto">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/40 via-transparent to-purple-500/40 blur-3xl"></div>
+                    <div class="absolute inset-4 rounded-full border border-white/10 backdrop-blur-sm"></div>
+                    <canvas id="innovation-orb-canvas" class="relative z-10 block w-full h-full" aria-hidden="true"></canvas>
+                    <div class="absolute inset-0 z-20 pointer-events-none">
+                        <div class="absolute -top-6 right-6 w-14 h-14 bg-gradient-to-br from-blue-400/70 to-cyan-400/70 rounded-full blur-sm animate-pulse"></div>
+                        <div class="absolute -bottom-8 left-10 w-16 h-16 bg-gradient-to-br from-purple-500/60 to-pink-500/70 rounded-full blur"></div>
+                    </div>
+                    <div class="absolute bottom-6 left-1/2 z-20 w-60 -translate-x-1/2">
+                        <div class="bg-white/10 border border-white/10 backdrop-blur-lg rounded-2xl px-6 py-4 shadow-xl text-center">
+                            <p class="text-sm font-semibold uppercase tracking-wide text-blue-100">Adaptive Data Sphere</p>
+                            <p class="text-xs text-blue-100/80 mt-1">Visualising secure cross-platform orchestration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Platforms Section -->
     <section id="platforms" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -458,6 +506,20 @@
         lineColor: 'rgba(96,165,250,0.3)',
         nodeCount: 80,
         connectionDistance: 160
+      });
+    </script>
+    <script src="data-orb.js"></script>
+    <script>
+      initDataOrb('innovation-orb-canvas', {
+        nodeColor: '#7dd3fc',
+        lineColor: '#60a5fa',
+        nodeCount: 160,
+        nodeSize: 3,
+        lineWidth: 1,
+        connectionDistance: 0.6,
+        rotationSpeedX: 0.00014,
+        rotationSpeedY: 0.00034,
+        rotationSpeedZ: 0.0001
       });
     </script>
     <script src="/layout.js"></script>
