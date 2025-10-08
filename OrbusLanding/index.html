@@ -285,6 +285,41 @@
         </div>
     </section>
 
+    <!-- Capability Orb -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.25),_transparent_55%)]"></div>
+        <div class="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+            <div class="order-2 lg:order-1 space-y-6">
+                <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20">Interactive delivery intelligence</span>
+                <h2 class="text-3xl sm:text-4xl font-bold">Complex web engineering, visualised</h2>
+                <p class="text-lg text-blue-100/90">Our teams design and ship immersive front-ends, real-time dashboards and automation interfaces that feel as polished as they perform. The live data orb below mirrors how we stitch strategy, design and engineering into a single motion.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-5 backdrop-blur">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Signal-rich builds</p>
+                        <p class="mt-2 text-sm text-blue-100/80">WebGL, realtime data layers and automation controls delivered with enterprise-grade governance.</p>
+                    </div>
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-5 backdrop-blur">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Operational clarity</p>
+                        <p class="mt-2 text-sm text-blue-100/80">Telemetry across marketing, product and revenue stacks surfaced in a single control centre.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-[420px] aspect-square">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-orbas-light-blue/40 via-transparent to-sky-500/40 blur-3xl"></div>
+                    <div class="absolute inset-4 rounded-full border border-white/10 backdrop-blur-sm"></div>
+                    <canvas id="innovation-orb-canvas" class="relative z-10 block w-full h-full" aria-hidden="true"></canvas>
+                    <div class="absolute bottom-6 left-1/2 z-20 w-60 -translate-x-1/2">
+                        <div class="bg-white/10 border border-white/10 backdrop-blur-lg rounded-2xl px-6 py-4 shadow-xl text-center">
+                            <p class="text-sm font-semibold uppercase tracking-wide text-blue-100">Live systems view</p>
+                            <p class="text-xs text-blue-100/80 mt-1">Strategy · Web · Automation · AI linked across the globe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orbas-midnight via-orbas-dark-blue to-orbas-blue overflow-hidden text-white">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.25),_transparent_55%)]"></div>
@@ -326,12 +361,23 @@
 
     <script src="/layout.js"></script>
     <script src="/hero-nodes.js"></script>
+    <script src="/data-orb.js"></script>
     <script>
         initHeroNodes('home-hero-canvas', {
             nodeColor: '#93c5fd',
             lineColor: 'rgba(96,165,250,0.4)',
             nodeCount: 90,
             connectionDistance: 160
+        });
+        initDataOrb('innovation-orb-canvas', {
+            nodeColor: '#bfdbfe',
+            lineColor: 'rgba(59,130,246,0.65)',
+            nodeCount: 150,
+            nodeSize: 3.2,
+            rotationSpeedX: 0.00022,
+            rotationSpeedY: 0.00046,
+            rotationSpeedZ: 0.00018,
+            glowStrength: 22
         });
         const privacyCheckbox = document.getElementById('privacy');
         const submitBtn = document.getElementById('submit-btn');
