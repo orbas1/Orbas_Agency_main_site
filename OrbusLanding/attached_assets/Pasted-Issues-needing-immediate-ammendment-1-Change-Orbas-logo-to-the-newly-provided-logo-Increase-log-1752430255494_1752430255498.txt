@@ -1,7 +1,7 @@
 Issues needing immediate ammendment 
 
 1. Change Orbas logo to the newly provided logo . Increase logo size by 30%
-2. The get started button makes no sense. It goes to agency.orbas.io but the words on the button makes no sense redwing it.
+2. The get started button makes no sense. It goes to agency.orbasagency.com but the words on the button makes no sense redwing it.
 3. The font styling is poor use poppin font
 4. I have attached logos for each of the platforms under their platform names you need to now integrate them I have only included the logo symbol only each one 
 5. I have include the Orbas agency logo symbol too 
