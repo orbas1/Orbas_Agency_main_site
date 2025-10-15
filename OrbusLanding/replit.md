@@ -25,7 +25,7 @@ The current system is an **enterprise-grade static website architecture** with t
 ```
 /
 ├── index.html          # Main enterprise landing page with all platform logos
-├── privacy.html        # UK GDPR compliant privacy policy (Blackridge Group Ltd)
+├── privacy.html        # UK GDPR compliant privacy policy (Blackwellen)
 └── attached_assets/    # Platform logos and branding assets
     ├── orbas logo_*           # Official Orbas logo files
     ├── Orbas ai_*             # AI platform logo
@@ -123,7 +123,7 @@ As the ecosystem grows, the architecture may need to evolve to:
 ✓ Implemented Poppins typography across the entire site for professional appearance
 ✓ Increased Orbas logo size by 30% for better brand presence
 ✓ Added professional AI hero image for enhanced visual appeal
-✓ Created comprehensive UK GDPR compliant privacy policy mentioning Blackridge Group Ltd
+✓ Created comprehensive UK GDPR compliant privacy policy mentioning Blackwellen
 ✓ Updated all platform features with accurate, detailed service descriptions
 ✓ Integrated proper platform logos with white backgrounds and shadows for consistency
 
